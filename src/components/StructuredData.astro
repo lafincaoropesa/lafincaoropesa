@@ -1,17 +1,51 @@
 ---
-import { SITE } from "../config/site";
+import { SITE, type Locale } from "../config/site";
 
 /** Données structurées Schema.org Hotel — incluses une fois sur la page d'accueil de chaque langue. */
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+
+const copy = {
+  es: {
+    description: `Dominio hotelero de 15 suites en el corazón de un olivar de 1.200 árboles, en La Calzada de Oropesa (Toledo, Castilla-La Mancha), a 2 horas de Madrid. Apertura prevista en primavera de 2027.`,
+    priceRange: `Desde ${SITE.suites.priceFrom} ${SITE.suites.currency}`,
+    spa: "Spa",
+    table: "Restaurante farm-to-table",
+    grove: "Olivar de 1.200 árboles",
+    madrid: "Madrid",
+    madridDesc: `A ${SITE.distances.madrid.km} km / ${SITE.distances.madrid.minutes} min en coche`,
+  },
+  fr: {
+    description: `Domaine hôtelier de 15 suites au cœur d'une oliveraie de 1 200 arbres, à La Calzada de Oropesa (Tolède, Castilla-La Mancha), à 2 heures de Madrid. Ouverture prévue au printemps 2027.`,
+    priceRange: `Dès ${SITE.suites.priceFrom} ${SITE.suites.currency}`,
+    spa: "Spa",
+    table: "Restaurant farm-to-table",
+    grove: "Oliveraie de 1 200 arbres",
+    madrid: "Madrid",
+    madridDesc: `À ${SITE.distances.madrid.km} km / ${SITE.distances.madrid.minutes} min en voiture`,
+  },
+  en: {
+    description: `A 15-suite hotel estate at the heart of a 1,200-tree olive grove, in La Calzada de Oropesa (Toledo, Castilla-La Mancha), 2 hours from Madrid. Opening expected spring 2027.`,
+    priceRange: `From ${SITE.suites.priceFrom} ${SITE.suites.currency}`,
+    spa: "Spa",
+    table: "Farm-to-table restaurant",
+    grove: "1,200-tree olive grove",
+    madrid: "Madrid",
+    madridDesc: `${SITE.distances.madrid.km} km / ${SITE.distances.madrid.minutes} min by car`,
+  },
+}[locale];
+
 const data = {
   "@context": "https://schema.org",
   "@type": "Hotel",
   name: SITE.name,
-  description:
-    "Domaine hôtelier de 15 suites au cœur d'une oliveraie de 1 200 arbres, à La Calzada de Oropesa (Tolède, Castilla-La Mancha), à 2 heures de Madrid. Ouverture prévue au printemps 2027.",
+  description: copy.description,
   url: SITE.url,
   telephone: SITE.contact.phone,
   email: SITE.contact.email,
-  priceRange: `À partir de ${SITE.suites.priceFrom} ${SITE.suites.currency}`,
+  priceRange: copy.priceRange,
   numberOfRooms: SITE.suites.count,
   address: {
     "@type": "PostalAddress",
@@ -26,16 +60,16 @@ const data = {
     longitude: SITE.address.lng,
   },
   amenityFeature: [
-    { "@type": "LocationFeatureSpecification", name: "Spa", value: false },
-    { "@type": "LocationFeatureSpecification", name: "Restaurante farm-to-table", value: false },
-    { "@type": "LocationFeatureSpecification", name: "Oliveraie de 1 200 árboles", value: true },
+    { "@type": "LocationFeatureSpecification", name: copy.spa, value: false },
+    { "@type": "LocationFeatureSpecification", name: copy.table, value: false },
+    { "@type": "LocationFeatureSpecification", name: copy.grove, value: true },
   ],
   isAccessibleForFree: false,
   nearbyAttraction: [
     {
       "@type": "City",
-      name: "Madrid",
-      description: `A ${SITE.distances.madrid.km} km / ${SITE.distances.madrid.minutes} min en coche`,
+      name: copy.madrid,
+      description: copy.madridDesc,
     },
   ],
 };

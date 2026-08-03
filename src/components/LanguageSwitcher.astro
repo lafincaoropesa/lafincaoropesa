@@ -18,7 +18,7 @@ const labels: Record<Locale, string> = { es: "ES", fr: "FR", en: "EN" };
     LOCALES.map((l) => (
       <a
         href={pathTo(routeKey, l)}
-        class={`text-utility ${l === locale ? "text-ocre" : "text-olive-nuit/70 hover:text-olive-nuit"}`}
+        class={`text-utility ${l === locale ? "text-ocre-texte" : "text-olive-nuit/70 hover:text-olive-nuit"}`}
         aria-current={l === locale ? "page" : undefined}
       >
         {labels[l]}

@@ -38,10 +38,19 @@ const t = getDictionary(locale);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SEO routeKey={routeKey} locale={locale} title={title} description={description} ogImage={ogImage} />
-    {includeStructuredData && <StructuredData />}
+    {includeStructuredData && <StructuredData locale={locale} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <noscript>
+      <style>
+        /* Sans JavaScript, reveal.ts ne tourne jamais : le contenu doit rester visible. */
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <a href="#contenu" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-chaux focus:p-3">

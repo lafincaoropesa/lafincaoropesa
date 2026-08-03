@@ -19,6 +19,9 @@
   --color-chaux: #f2efe6;
   --color-terre-cuite: #ad8468;
   --color-ocre: #ca7800;
+  /* Variante assombrie de l'ocre, réservée au texte sur fond clair (pierre/chaux) :
+     l'ocre exact du logo n'atteint pas 4,5:1 de contraste en texte courant (WCAG AA). */
+  --color-ocre-texte: #834e00;
 
   --font-display: "Fraunces Variable", ui-serif, serif;
   --font-body: "Karla", ui-sans-serif, sans-serif;
@@ -40,10 +43,17 @@
     @apply font-display font-normal;
   }
 
-  /* Focus clavier toujours visible — jamais supprimé pour l'esthétique. */
+  /*
+   * Focus clavier toujours visible — jamais supprimé pour l'esthétique.
+   * Double anneau (olive foncé + halo ocre) plutôt qu'un simple trait ocre :
+   * l'ocre seul manque de contraste sur fond clair (pierre/chaux), l'olive foncé
+   * seul disparaît sur fond sombre (olive-nuit) — la combinaison reste visible
+   * quel que soit le fond.
+   */
   :focus-visible {
-    outline: 2px solid var(--color-ocre);
-    outline-offset: 3px;
+    outline: 2px solid var(--color-olive-nuit);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--color-ocre);
   }
 
   @media (prefers-reduced-motion: reduce) {

@@ -42,7 +42,7 @@ const navItems: { key: RouteKey; label: string }[] = [
             href={pathTo(item.key, locale)}
             class:list={[
               "text-utility",
-              routeKey === item.key ? "text-ocre" : "hover:text-ocre",
+              routeKey === item.key ? "text-ocre-texte" : "hover:text-ocre-texte",
             ]}
             aria-current={routeKey === item.key ? "page" : undefined}
           >

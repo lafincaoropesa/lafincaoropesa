@@ -40,17 +40,17 @@ const year = new Date().getFullYear();
     <div>
       <h2 class="text-utility mb-3 text-chaux/70">{t.footer.contactTitle}</h2>
       <p class="text-sm">
-        <a href={`mailto:${SITE.contact.email}`} class="hover:text-ocre">{SITE.contact.email}</a>
+        <a href={`mailto:${SITE.contact.email}`} class="hover:underline decoration-ocre underline-offset-2">{SITE.contact.email}</a>
       </p>
       <p class="text-sm">
-        <a href={`tel:${SITE.contact.phone.replace(/\s+/g, "")}`} class="hover:text-ocre">{SITE.contact.phone}</a>
+        <a href={`tel:${SITE.contact.phone.replace(/\s+/g, "")}`} class="hover:underline decoration-ocre underline-offset-2">{SITE.contact.phone}</a>
       </p>
       {
         SITE.socialLinks.length > 0 && (
           <ul class="mt-3 flex gap-3">
             {SITE.socialLinks.map((s) => (
               <li>
-                <a href={s.url} class="text-sm hover:text-ocre" rel="noopener noreferrer">
+                <a href={s.url} class="text-sm hover:underline decoration-ocre underline-offset-2" rel="noopener noreferrer">
                   {s.label}
                 </a>
               </li>
@@ -63,9 +63,9 @@ const year = new Date().getFullYear();
     <div>
       <h2 class="text-utility mb-3 text-chaux/70">{t.footer.legalTitle}</h2>
       <ul class="space-y-1 text-sm">
-        <li><a href={pathTo("legal", locale)} class="hover:text-ocre">{t.footer.legalNotice}</a></li>
-        <li><a href={pathTo("privacidad", locale)} class="hover:text-ocre">{t.footer.privacy}</a></li>
-        <li><a href={pathTo("cookies", locale)} class="hover:text-ocre">{t.footer.cookies}</a></li>
+        <li><a href={pathTo("legal", locale)} class="hover:underline decoration-ocre underline-offset-2">{t.footer.legalNotice}</a></li>
+        <li><a href={pathTo("privacidad", locale)} class="hover:underline decoration-ocre underline-offset-2">{t.footer.privacy}</a></li>
+        <li><a href={pathTo("cookies", locale)} class="hover:underline decoration-ocre underline-offset-2">{t.footer.cookies}</a></li>
       </ul>
     </div>
   </div>
