@@ -14,10 +14,17 @@
  */
 @theme {
   --color-olive-nuit: #2e3524;
-  --color-olive-feuille: #5c6440;
+  /* Assombri de #5c6440 à #545c3c : la valeur d'origine ne donnait que 4,32:1
+     sur fond pierre (sous le seuil AA 4,5:1) alors que c'est la couleur de
+     quasiment tous les paragraphes du site. Écart visuel négligeable. */
+  --color-olive-feuille: #545c3c;
   --color-pierre: #dcd6c7;
   --color-chaux: #f2efe6;
   --color-terre-cuite: #ad8468;
+  /* Variante assombrie, pour le texte d'erreur sur fond clair : la terre-cuite
+     exacte ne donne que ~2,3:1 sur pierre/chaux, trop faible pour un message
+     d'erreur qui doit rester lisible (WCAG AA). */
+  --color-terre-cuite-texte: #7a4d35;
   --color-ocre: #ca7800;
   /* Variante assombrie de l'ocre, réservée au texte sur fond clair (pierre/chaux) :
      l'ocre exact du logo n'atteint pas 4,5:1 de contraste en texte courant (WCAG AA). */
