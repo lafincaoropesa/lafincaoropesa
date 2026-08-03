@@ -23,7 +23,15 @@ const teasers = [
 
 <Layout locale={locale} routeKey="home" title={h.seoTitle} description={h.seoDescription} includeStructuredData>
   <section>
-    <div class="bg-pierre pt-10 md:pt-14">
+    <div class="bg-olive-nuit px-4 py-12 text-center text-chaux md:py-20">
+      <p class="text-utility mb-4 text-chaux/70">{h.hero.kicker}</p>
+      <h1 class="mb-4 text-4xl md:text-6xl">{h.hero.title}</h1>
+      <p class="mx-auto mb-8 max-w-xl text-lg text-chaux/90">{h.hero.subtitle}</p>
+      <a href="#liste-attente" class="text-utility border border-chaux px-6 py-3 hover:bg-chaux hover:text-olive-nuit">
+        {h.hero.cta}
+      </a>
+    </div>
+    <div class="bg-pierre pb-10 pt-10 md:pb-14 md:pt-14">
       <div class="mx-auto aspect-[4/3] w-full max-w-md overflow-hidden px-4 md:max-w-lg">
         <Photo
           src={vueAerienne}
@@ -34,14 +42,6 @@ const teasers = [
           class="h-full w-full"
         />
       </div>
-    </div>
-    <div class="bg-olive-nuit px-4 py-12 text-center text-chaux md:py-20">
-      <p class="text-utility mb-4 text-chaux/70">{h.hero.kicker}</p>
-      <h1 class="mb-4 text-4xl md:text-6xl">{h.hero.title}</h1>
-      <p class="mx-auto mb-8 max-w-xl text-lg text-chaux/90">{h.hero.subtitle}</p>
-      <a href="#liste-attente" class="text-utility border border-chaux px-6 py-3 hover:bg-chaux hover:text-olive-nuit">
-        {h.hero.cta}
-      </a>
     </div>
   </section>
 
