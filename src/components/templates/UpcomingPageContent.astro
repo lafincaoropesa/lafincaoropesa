@@ -1,0 +1,26 @@
+---
+/**
+ * Gabarit prêt pour les pages Le Spa / La Table / Les Retraites, non publiées tant que
+ * SITE.upcomingPages.<clé> est à false et qu'aucun fichier de route n'existe dans src/pages.
+ * Voir MODIFIER-LE-SITE.md, section "Activer une page à venir", pour l'activer.
+ */
+import type { Locale } from "../../config/site";
+import { getDictionary } from "../../i18n/ui";
+
+interface Props {
+  locale: Locale;
+  contentKey: "spa" | "table" | "retraites";
+}
+const { locale, contentKey } = Astro.props;
+const t = getDictionary(locale);
+const content = t[contentKey];
+---
+
+<header class="mx-auto max-w-3xl px-4 pt-16 text-center md:pt-24">
+  <p class="text-utility mb-4 text-olive-feuille">{content.hero.kicker}</p>
+  <h1 class="mb-8 text-4xl md:text-6xl">{content.hero.title}</h1>
+</header>
+
+<p class="reveal mx-auto max-w-2xl px-4 py-16 text-center text-lg leading-relaxed text-olive-feuille md:py-24">
+  {content.body}
+</p>

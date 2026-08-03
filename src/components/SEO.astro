@@ -1,0 +1,36 @@
+---
+import { SITE } from "../config/site";
+import { alternateLinks, type RouteKey } from "../i18n/routes";
+import type { Locale } from "../config/site";
+
+interface Props {
+  routeKey: RouteKey;
+  locale: Locale;
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+const { routeKey, locale, title, description, ogImage = "/og/default.jpg" } = Astro.props;
+
+const links = alternateLinks(routeKey);
+const canonical = links.find((l) => l.hreflang === locale)?.href ?? SITE.url;
+const absoluteOgImage = new URL(ogImage, SITE.url).toString();
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{links.map((l) => <link rel="alternate" hreflang={l.hreflang} href={l.href} />)}
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={absoluteOgImage} />
+<meta property="og:locale" content={locale} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteOgImage} />

@@ -1,0 +1,23 @@
+---
+/**
+ * Bloc de réservation aux proportions exactes de la photo à venir.
+ * Utilisé tant que src/assets/photos/ n'a pas reçu les fichiers définitifs.
+ * Ne JAMAIS remplacer par une image d'illustration générique (banque d'images) :
+ * voir src/assets/photos/README.md.
+ */
+interface Props {
+  ratio?: "4/5" | "3/4" | "16/9" | "1/1" | "3/2";
+  label: string;
+  class?: string;
+}
+const { ratio = "4/5", label, class: className = "" } = Astro.props;
+---
+
+<div
+  class={`flex items-end justify-start bg-olive-feuille/10 border border-olive-feuille/25 p-4 ${className}`}
+  style={`aspect-ratio: ${ratio};`}
+  role="img"
+  aria-label={`Photographie à venir : ${label}`}
+>
+  <span class="text-utility text-olive-feuille/70">{label}</span>
+</div>

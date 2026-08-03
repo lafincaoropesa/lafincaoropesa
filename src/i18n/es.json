@@ -1,0 +1,241 @@
+{
+  "meta": { "htmlLang": "es" },
+  "nav": {
+    "home": "El Dominio",
+    "oliveraie": "El Olivar",
+    "projet": "El Proyecto",
+    "sejourner": "Alojarse",
+    "menuOpen": "Abrir el menú",
+    "menuClose": "Cerrar el menú",
+    "skipToContent": "Ir al contenido principal"
+  },
+  "languageSwitcher": { "label": "Idioma" },
+  "announcementBar": {
+    "text": "Apertura primavera de 2027",
+    "cta": "Únete a la lista de espera"
+  },
+  "footer": {
+    "addressTitle": "Cómo llegar",
+    "distanceMadrid": "A 2 h de Madrid",
+    "distanceAirport": "A 2 h 10 del aeropuerto Madrid-Barajas",
+    "contactTitle": "Contacto",
+    "legalTitle": "Legal",
+    "legalNotice": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "cookies": "Política de cookies",
+    "waitlistTitle": "Lista de espera",
+    "waitlistText": "Sé de los primeros en saber cuándo abren las puertas.",
+    "copyright": "© {year} La Finca Oropesa. Todos los derechos reservados."
+  },
+  "home": {
+    "seoTitle": "La Finca Oropesa — Hotel rural de lujo entre olivos, cerca de Madrid",
+    "seoDescription": "Un dominio de 15 suites entre 1.200 olivos, a 2 horas de Madrid, en La Calzada de Oropesa (Toledo). Apertura primavera de 2027. Únete a la lista de espera.",
+    "hero": {
+      "kicker": "La Calzada de Oropesa · 1.200 olivos",
+      "title": "Volver a lo esencial",
+      "subtitle": "Un dominio en construcción entre olivos centenarios, a dos horas de Madrid.",
+      "cta": "Únete a la lista de espera"
+    },
+    "thesis": {
+      "title": "Un dominio en construcción",
+      "body": "La Finca Oropesa no abre mañana. Se está construyendo, piedra a piedra, entre 1.200 olivos plantados mucho antes que nosotros. Cuando abra, en la primavera de 2027, serán quince suites, una mesa que cocinará lo que da la tierra, y un lugar pensado para no hacer nada — y que eso baste."
+    },
+    "teasers": {
+      "oliveraie": {
+        "title": "El Olivar",
+        "body": "La tierra, la piedra, los 1.200 olivos tal como son hoy, antes de que nada cambie.",
+        "cta": "Descubrir el olivar"
+      },
+      "projet": {
+        "title": "El Proyecto",
+        "body": "Quince suites, un spa, una mesa farm-to-table. Lo que está por llegar.",
+        "cta": "Ver el proyecto"
+      },
+      "sejourner": {
+        "title": "Alojarse",
+        "body": "Tarifas, fechas de apertura y cómo dejar tu nombre en la lista de espera.",
+        "cta": "Más información"
+      }
+    },
+    "waitlist": {
+      "title": "Lista de espera",
+      "body": "Déjanos tus datos y serás de los primeros en saber cuándo abrimos."
+    }
+  },
+  "oliveraie": {
+    "seoTitle": "El Olivar — 1.200 olivos en La Calzada de Oropesa | La Finca Oropesa",
+    "seoDescription": "La tierra, la piedra y los 1.200 olivos de La Finca Oropesa, fotografiados antes de la transformación del dominio en Castilla-La Mancha.",
+    "hero": {
+      "kicker": "El Olivar",
+      "title": "Donde el tiempo se detiene"
+    },
+    "intro": "Antes de ser un hotel, este lugar es una tierra. 1.200 olivos, algunos centenarios, dispuestos en hileras que siguen la pendiente del terreno. Estas fotografías muestran la finca tal como era antes de las obras — la piedra sin retocar, los árboles sin podar para la temporada, el silencio real del campo de Castilla-La Mancha.",
+    "sections": {
+      "trees": {
+        "title": "1.200 olivos",
+        "body": "Cada hilera cuenta una historia distinta de la tierra: el suelo calizo, la sequía que templa las raíces, la sombra corta de las hojas plateadas. Nada de esto se construye — se hereda."
+      },
+      "stone": {
+        "title": "La piedra y lo antiguo",
+        "body": "Los muros de la finca, el suelo, la estructura de las construcciones originales: el proyecto se apoya en lo que ya existe, no lo sustituye."
+      },
+      "land": {
+        "title": "La tierra de Castilla-La Mancha",
+        "body": "Un horizonte llano, la luz seca del interior, la escala del paisaje manchego. Es este territorio el que da forma a todo lo demás."
+      }
+    },
+    "cta": {
+      "title": "Ver hacia dónde va este lugar",
+      "body": "Descubre el proyecto que se está construyendo aquí.",
+      "link": "Ver el proyecto"
+    }
+  },
+  "projet": {
+    "seoTitle": "El Proyecto — 15 suites, spa y mesa farm-to-table | La Finca Oropesa",
+    "seoDescription": "Quince suites para dos personas, un spa, una mesa farm-to-table y retiros de bienestar: lo que abrirá en La Finca Oropesa en primavera de 2027.",
+    "hero": {
+      "kicker": "El Proyecto",
+      "title": "Lo que está por llegar"
+    },
+    "intro": "Nada de lo que sigue existe todavía. Se está construyendo. Lo describimos tal como será, no como es hoy — sin fotografías de lo que aún no existe, porque un proyecto serio no se disfraza.",
+    "suites": {
+      "title": "Quince suites",
+      "body": "Quince suites para dos personas ocuparán el corazón del dominio, entre los olivos. Un único tipo de suite por ahora — la diferenciación llegará más adelante, según cómo evolucione la obra.",
+      "priceNote": "Desde 400 € la noche",
+      "detailsNote": "Superficie, equipamiento y vistas se publicarán antes de la apertura."
+    },
+    "spa": {
+      "title": "El spa",
+      "body": "Un espacio pensado para el descanso real, con materiales nobles y silencio como lujo principal."
+    },
+    "table": {
+      "title": "La mesa",
+      "body": "Una cocina farm-to-table que servirá lo que da la propia finca: aceite, verdura, lo de temporada."
+    },
+    "retraites": {
+      "title": "Los retiros",
+      "body": "Estancias pensadas para ralentizar de verdad, en pequeño grupo o en soledad."
+    },
+    "cta": {
+      "title": "Reservar tu lugar en la lista de espera",
+      "body": "Sigue el avance del proyecto y sé de los primeros en saber cuándo abrimos.",
+      "link": "Alojarse"
+    }
+  },
+  "sejourner": {
+    "seoTitle": "Alojarse — Tarifas, apertura y contacto | La Finca Oropesa",
+    "seoDescription": "Tarifa indicativa desde 400 € la noche, apertura primavera de 2027, a 2 horas de Madrid. Deja tu solicitud o únete a la lista de espera de La Finca Oropesa.",
+    "hero": {
+      "kicker": "Alojarse",
+      "title": "Lejos de todo, cerca de ti"
+    },
+    "info": {
+      "title": "Lo esencial",
+      "price": "Desde 400 € la noche",
+      "priceNote": "Tarifa indicativa, sujeta a confirmación antes de la apertura.",
+      "opening": "Apertura: primavera de 2027",
+      "capacity": "Quince suites para dos personas"
+    },
+    "access": {
+      "title": "Cómo llegar",
+      "address": "La Viña del Capitán, La Calzada de Oropesa, Toledo, Castilla-La Mancha",
+      "fromMadrid": "A 2 h en coche desde Madrid",
+      "fromAirport": "A 2 h 10 del aeropuerto Madrid-Barajas"
+    },
+    "requestForm": {
+      "title": "Solicitud de información",
+      "body": "Cuéntanos tu proyecto de estancia. Te responderemos en cuanto podamos."
+    },
+    "waitlistForm": {
+      "title": "Lista de espera",
+      "body": "Déjanos tus datos y serás de los primeros en saber cuándo abrimos."
+    }
+  },
+  "spa": {
+    "seoTitle": "El Spa — La Finca Oropesa",
+    "seoDescription": "Un espacio de descanso entre los olivos. Página en preparación.",
+    "hero": { "kicker": "El Proyecto", "title": "El Spa" },
+    "body": "Este espacio se está diseñando. Las fotografías llegarán cuando exista algo real que mostrar."
+  },
+  "table": {
+    "seoTitle": "La Mesa — La Finca Oropesa",
+    "seoDescription": "Una cocina farm-to-table entre los olivos. Página en preparación.",
+    "hero": { "kicker": "El Proyecto", "title": "La Mesa" },
+    "body": "Esta cocina se está diseñando. Las fotografías llegarán cuando exista algo real que mostrar."
+  },
+  "retraites": {
+    "seoTitle": "Los Retiros — La Finca Oropesa",
+    "seoDescription": "Retiros de bienestar entre los olivos. Página en preparación.",
+    "hero": { "kicker": "El Proyecto", "title": "Los Retiros" },
+    "body": "Este programa se está diseñando. Las fotografías llegarán cuando exista algo real que mostrar."
+  },
+  "confirmation": {
+    "seoTitle": "Gracias — La Finca Oropesa",
+    "seoDescription": "Confirmación de tu solicitud.",
+    "backHome": "Volver al inicio"
+  },
+  "forms": {
+    "waitlist": {
+      "title": "Lista de espera",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "stayPeriod": "Periodo de estancia previsto",
+      "stayPeriodOptional": "(opcional)",
+      "consent": "Acepto que mis datos se usen para recibir noticias de La Finca Oropesa, según la ",
+      "consentLink": "política de privacidad",
+      "consentRequired": "Debes aceptar la política de privacidad para continuar.",
+      "honeypotLabel": "Deja este campo vacío",
+      "submit": "Unirme a la lista de espera",
+      "submitting": "Enviando…",
+      "success": "Gracias. Te avisaremos en cuanto tengamos novedades.",
+      "error": "No se pudo enviar el formulario. Vuelve a intentarlo.",
+      "retry": "Reintentar",
+      "errors": {
+        "firstName": "Indica tu nombre.",
+        "lastName": "Indica tus apellidos.",
+        "email": "Indica un correo electrónico válido."
+      }
+    },
+    "stayRequest": {
+      "title": "Solicitud de información",
+      "name": "Nombre y apellidos",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "phoneOptional": "(opcional)",
+      "dates": "Fechas previstas",
+      "guests": "Número de personas",
+      "message": "Mensaje",
+      "consent": "Acepto que mis datos se usen para responder a mi solicitud, según la ",
+      "consentLink": "política de privacidad",
+      "consentRequired": "Debes aceptar la política de privacidad para continuar.",
+      "honeypotLabel": "Deja este campo vacío",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando…",
+      "success": "Gracias por tu solicitud. Te responderemos en cuanto podamos.",
+      "error": "No se pudo enviar el formulario. Vuelve a intentarlo.",
+      "retry": "Reintentar",
+      "errors": {
+        "name": "Indica tu nombre.",
+        "email": "Indica un correo electrónico válido.",
+        "dates": "Indica las fechas previstas.",
+        "guests": "Indica el número de personas.",
+        "message": "Escribe un mensaje."
+      }
+    }
+  },
+  "legal": {
+    "todoBanner": "Página en preparación: esta sección se completará antes de la apertura del sitio al público.",
+    "legalNotice": { "navTitle": "Aviso legal" },
+    "privacy": { "navTitle": "Política de privacidad" },
+    "cookies": { "navTitle": "Política de cookies" }
+  },
+  "photoDisclaimer": "La finca antes de su transformación",
+  "lightbox": {
+    "close": "Cerrar (Esc)",
+    "next": "Siguiente",
+    "prev": "Anterior",
+    "counter": "{current} de {total}",
+    "open": "Ampliar la fotografía"
+  }
+}

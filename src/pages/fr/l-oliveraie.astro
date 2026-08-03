@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PhotoPlaceholder from "../../components/PhotoPlaceholder.astro";
+import HorizonDivider from "../../components/HorizonDivider.astro";
+import { pathTo } from "../../i18n/routes";
+import { getDictionary } from "../../i18n/ui";
+
+const locale = "fr" as const;
+const t = getDictionary(locale);
+const p = t.oliveraie;
+const sectionKeys = ["trees", "stone", "land"] as const;
+const ratios = ["4/5", "3/2", "4/5"] as const;
+---
+
+<Layout locale={locale} routeKey="oliveraie" title={p.seoTitle} description={p.seoDescription}>
+  <header class="mx-auto max-w-3xl px-4 pt-16 text-center md:pt-24">
+    <p class="text-utility mb-4 text-olive-feuille">{p.hero.kicker}</p>
+    <h1 class="mb-8 text-4xl md:text-6xl">{p.hero.title}</h1>
+  </header>
+
+  <p class="reveal mx-auto max-w-2xl px-4 pb-16 text-center text-lg leading-relaxed text-olive-feuille md:pb-24">
+    {p.intro}
+  </p>
+
+  <HorizonDivider />
+
+  <div class="mx-auto max-w-5xl px-4 py-16 md:py-24">
+    {
+      sectionKeys.map((key, i) => (
+        <div class:list={["reveal grid gap-8 py-12 md:grid-cols-2 md:items-center", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+          <PhotoPlaceholder ratio={ratios[i]} label={p.sections[key].title} />
+          <div>
+            <h2 class="mb-3 text-2xl">{p.sections[key].title}</h2>
+            <p class="text-olive-feuille leading-relaxed">{p.sections[key].body}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <HorizonDivider />
+
+  <section class="reveal mx-auto max-w-xl px-4 py-16 text-center md:py-24">
+    <h2 class="mb-3 text-3xl">{p.cta.title}</h2>
+    <p class="mb-6 text-olive-feuille">{p.cta.body}</p>
+    <a href={pathTo("projet", locale)} class="text-utility border border-olive-nuit px-6 py-3 hover:bg-olive-nuit hover:text-chaux">
+      {p.cta.link}
+    </a>
+  </section>
+</Layout>

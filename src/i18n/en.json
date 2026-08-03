@@ -1,0 +1,241 @@
+{
+  "meta": { "htmlLang": "en" },
+  "nav": {
+    "home": "The Estate",
+    "oliveraie": "The Olive Grove",
+    "projet": "The Project",
+    "sejourner": "Stay",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "skipToContent": "Skip to main content"
+  },
+  "languageSwitcher": { "label": "Language" },
+  "announcementBar": {
+    "text": "Opening spring 2027",
+    "cta": "Join the waiting list"
+  },
+  "footer": {
+    "addressTitle": "Getting here",
+    "distanceMadrid": "2 hours from Madrid",
+    "distanceAirport": "2 h 10 from Madrid-Barajas Airport",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "waitlistTitle": "Waiting list",
+    "waitlistText": "Be among the first to know when we open.",
+    "copyright": "© {year} La Finca Oropesa. All rights reserved."
+  },
+  "home": {
+    "seoTitle": "La Finca Oropesa — Luxury olive grove retreat near Madrid, Spain",
+    "seoDescription": "A 15-suite estate among 1,200 olive trees, 2 hours from Madrid, in La Calzada de Oropesa (Toledo). Opening spring 2027. Join the waiting list.",
+    "hero": {
+      "kicker": "La Calzada de Oropesa · 1,200 olive trees",
+      "title": "Return to what matters",
+      "subtitle": "An estate under construction inside a century-old olive grove, two hours from Madrid.",
+      "cta": "Join the waiting list"
+    },
+    "thesis": {
+      "title": "An estate under construction",
+      "body": "La Finca Oropesa doesn't open tomorrow. It is being built, stone by stone, among 1,200 olive trees planted long before us. When it opens, in spring 2027, there will be fifteen suites, a table cooking what the land gives, and a place built for doing nothing — and having that be enough."
+    },
+    "teasers": {
+      "oliveraie": {
+        "title": "The Olive Grove",
+        "body": "The land, the stone, the 1,200 olive trees as they stand today, before anything changes.",
+        "cta": "Discover the olive grove"
+      },
+      "projet": {
+        "title": "The Project",
+        "body": "Fifteen suites, a spa, a farm-to-table kitchen. What's coming.",
+        "cta": "See the project"
+      },
+      "sejourner": {
+        "title": "Stay",
+        "body": "Rates, opening season, and how to add your name to the waiting list.",
+        "cta": "Learn more"
+      }
+    },
+    "waitlist": {
+      "title": "Waiting list",
+      "body": "Leave your details and you'll be among the first to hear when we open."
+    }
+  },
+  "oliveraie": {
+    "seoTitle": "The Olive Grove — 1,200 olive trees in La Calzada de Oropesa | La Finca Oropesa",
+    "seoDescription": "The land, the stone and the 1,200 olive trees of La Finca Oropesa, photographed before the estate's transformation in Castilla-La Mancha, Spain.",
+    "hero": {
+      "kicker": "The Olive Grove",
+      "title": "Where time stands still"
+    },
+    "intro": "Before it's a hotel, this place is a piece of land. 1,200 olive trees, some a century old, set in rows that follow the slope of the ground. These photographs show the finca as it was before construction began — the stone untouched, the trees unpruned for a season, the real silence of the Castilla-La Mancha countryside.",
+    "sections": {
+      "trees": {
+        "title": "1,200 olive trees",
+        "body": "Every row tells a different story of the land: the chalky soil, the drought that toughens the roots, the short shade of silver leaves. None of this is built — it's inherited."
+      },
+      "stone": {
+        "title": "Stone and the old buildings",
+        "body": "The estate's walls, the ground, the structure of the original buildings: the project builds on what already exists, rather than replacing it."
+      },
+      "land": {
+        "title": "The land of Castilla-La Mancha",
+        "body": "A flat horizon, the dry light of inland Spain, the scale of the Manchego landscape. It's this land that shapes everything else."
+      }
+    },
+    "cta": {
+      "title": "See where this place is heading",
+      "body": "Discover the project being built here.",
+      "link": "See the project"
+    }
+  },
+  "projet": {
+    "seoTitle": "The Project — 15 suites, spa and farm-to-table table | La Finca Oropesa",
+    "seoDescription": "Fifteen suites for two, a spa, a farm-to-table kitchen and wellness retreats: what will open at La Finca Oropesa in spring 2027.",
+    "hero": {
+      "kicker": "The Project",
+      "title": "What's coming"
+    },
+    "intro": "Nothing below exists yet. It's being built. We describe it as it will be, not as it is today — no staged photos of what doesn't exist yet, because a serious project doesn't need to fake it.",
+    "suites": {
+      "title": "Fifteen suites",
+      "body": "Fifteen suites for two will sit at the heart of the estate, among the olive trees. A single suite type for now — differentiation will come later, as construction progresses.",
+      "priceNote": "From €400 a night",
+      "detailsNote": "Size, amenities and views will be published before opening."
+    },
+    "spa": {
+      "title": "The Spa",
+      "body": "A space built for real rest, with honest materials and silence as the main luxury."
+    },
+    "table": {
+      "title": "The Table",
+      "body": "A farm-to-table kitchen serving what the estate itself produces: oil, vegetables, whatever is in season."
+    },
+    "retraites": {
+      "title": "The Retreats",
+      "body": "Stays built to truly slow down, in a small group or alone. Here, we do nothing — and that's the whole point."
+    },
+    "cta": {
+      "title": "Reserve your place on the waiting list",
+      "body": "Follow the project as it's built and be among the first to hear when we open.",
+      "link": "Stay"
+    }
+  },
+  "sejourner": {
+    "seoTitle": "Stay — Rates, opening and contact | La Finca Oropesa",
+    "seoDescription": "Indicative rate from €400 a night, opening spring 2027, 2 hours from Madrid. Send your request or join the waiting list for La Finca Oropesa.",
+    "hero": {
+      "kicker": "Stay",
+      "title": "Far from everything, close to yourself"
+    },
+    "info": {
+      "title": "The essentials",
+      "price": "From €400 a night",
+      "priceNote": "Indicative rate, subject to confirmation before opening.",
+      "opening": "Opening: spring 2027",
+      "capacity": "Fifteen suites for two"
+    },
+    "access": {
+      "title": "Getting here",
+      "address": "La Viña del Capitán, La Calzada de Oropesa, Toledo, Castilla-La Mancha",
+      "fromMadrid": "2 hours' drive from Madrid",
+      "fromAirport": "2 h 10 from Madrid-Barajas Airport"
+    },
+    "requestForm": {
+      "title": "Request information",
+      "body": "Tell us about the stay you have in mind. We'll get back to you as soon as we can."
+    },
+    "waitlistForm": {
+      "title": "Waiting list",
+      "body": "Leave your details and you'll be among the first to hear when we open."
+    }
+  },
+  "spa": {
+    "seoTitle": "The Spa — La Finca Oropesa",
+    "seoDescription": "A space for rest among the olive trees. Page in preparation.",
+    "hero": { "kicker": "The Project", "title": "The Spa" },
+    "body": "This space is being designed. Photographs will follow once there is something real to show."
+  },
+  "table": {
+    "seoTitle": "The Table — La Finca Oropesa",
+    "seoDescription": "A farm-to-table kitchen among the olive trees. Page in preparation.",
+    "hero": { "kicker": "The Project", "title": "The Table" },
+    "body": "This kitchen is being designed. Photographs will follow once there is something real to show."
+  },
+  "retraites": {
+    "seoTitle": "The Retreats — La Finca Oropesa",
+    "seoDescription": "Wellness retreats among the olive trees. Page in preparation.",
+    "hero": { "kicker": "The Project", "title": "The Retreats" },
+    "body": "This programme is being designed. Photographs will follow once there is something real to show."
+  },
+  "confirmation": {
+    "seoTitle": "Thank you — La Finca Oropesa",
+    "seoDescription": "Confirmation of your request.",
+    "backHome": "Back to home"
+  },
+  "forms": {
+    "waitlist": {
+      "title": "Waiting list",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "stayPeriod": "Planned stay period",
+      "stayPeriodOptional": "(optional)",
+      "consent": "I agree that my data will be used to receive news from La Finca Oropesa, in accordance with the ",
+      "consentLink": "privacy policy",
+      "consentRequired": "You must accept the privacy policy to continue.",
+      "honeypotLabel": "Leave this field empty",
+      "submit": "Join the waiting list",
+      "submitting": "Sending…",
+      "success": "Thank you. We'll be in touch as soon as we have news.",
+      "error": "The form could not be sent. Please try again.",
+      "retry": "Retry",
+      "errors": {
+        "firstName": "Please enter your first name.",
+        "lastName": "Please enter your last name.",
+        "email": "Please enter a valid email address."
+      }
+    },
+    "stayRequest": {
+      "title": "Request information",
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "phoneOptional": "(optional)",
+      "dates": "Planned dates",
+      "guests": "Number of guests",
+      "message": "Message",
+      "consent": "I agree that my data will be used to respond to my request, in accordance with the ",
+      "consentLink": "privacy policy",
+      "consentRequired": "You must accept the privacy policy to continue.",
+      "honeypotLabel": "Leave this field empty",
+      "submit": "Send request",
+      "submitting": "Sending…",
+      "success": "Thank you for your request. We'll get back to you as soon as we can.",
+      "error": "The form could not be sent. Please try again.",
+      "retry": "Retry",
+      "errors": {
+        "name": "Please enter your name.",
+        "email": "Please enter a valid email address.",
+        "dates": "Please enter your planned dates.",
+        "guests": "Please enter the number of guests.",
+        "message": "Please write a message."
+      }
+    }
+  },
+  "legal": {
+    "todoBanner": "Page in preparation: this section will be completed before the site opens to the public.",
+    "legalNotice": { "navTitle": "Legal notice" },
+    "privacy": { "navTitle": "Privacy policy" },
+    "cookies": { "navTitle": "Cookie policy" }
+  },
+  "photoDisclaimer": "The estate before its transformation",
+  "lightbox": {
+    "close": "Close (Esc)",
+    "next": "Next",
+    "prev": "Previous",
+    "counter": "{current} of {total}",
+    "open": "Enlarge photograph"
+  }
+}

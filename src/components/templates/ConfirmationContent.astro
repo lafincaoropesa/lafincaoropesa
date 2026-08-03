@@ -1,0 +1,33 @@
+---
+/**
+ * Contenu de la page de confirmation affichée après une soumission de formulaire
+ * sans JavaScript (redirection depuis /api/waitlist ou /api/stay-request).
+ * Cette page doit être rendue à la demande (prerender = false) : c'est la seule façon
+ * de lire le statut dans l'URL sur un site par ailleurs entièrement statique.
+ */
+import type { Locale } from "../../config/site";
+import { pathTo } from "../../i18n/routes";
+import { getDictionary } from "../../i18n/ui";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+
+const form = Astro.url.searchParams.get("form") === "stay-request" ? "stayRequest" : "waitlist";
+const status = Astro.url.searchParams.get("status") === "success" ? "success" : "error";
+const message = t.forms[form][status];
+---
+
+<section class="reveal mx-auto max-w-xl px-4 py-24 text-center">
+  <p
+    class:list={["text-lg", status === "error" && "text-terre-cuite"]}
+    role={status === "error" ? "alert" : "status"}
+  >
+    {message}
+  </p>
+  <a href={pathTo("home", locale)} class="text-utility mt-8 inline-block border border-olive-nuit px-6 py-3 hover:bg-olive-nuit hover:text-chaux">
+    {t.confirmation.backHome}
+  </a>
+</section>

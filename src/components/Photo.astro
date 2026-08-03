@@ -1,0 +1,51 @@
+---
+import { Image, getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+/**
+ * Composant à utiliser pour toute photographie du domaine (une fois les fichiers
+ * définitifs déposés dans src/assets/photos/ — voir le README de ce dossier).
+ * Ajoute automatiquement la mention obligatoire "avant transformation" et le
+ * déclenchement de la visionneuse plein écran.
+ */
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  disclaimer: string;
+  group?: string;
+  priority?: boolean;
+  class?: string;
+  sizes?: string;
+}
+const { src, alt, disclaimer, group = "default", priority = false, class: className = "", sizes = "100vw" } = Astro.props;
+
+// Variante large dédiée à la visionneuse plein écran.
+const fullSize = await getImage({ src, width: 1920, format: "avif" });
+---
+
+<figure class={`relative ${className}`}>
+  <button
+    type="button"
+    class="block w-full cursor-zoom-in"
+    data-lightbox-trigger
+    data-lightbox-group={group}
+    data-lightbox-src={fullSize.src}
+    data-lightbox-alt={alt}
+    data-lightbox-caption={disclaimer}
+    aria-haspopup="dialog"
+  >
+    <Image
+      src={src}
+      alt={alt}
+      widths={[400, 800, 1200, 1920]}
+      sizes={sizes}
+      loading={priority ? "eager" : "lazy"}
+      fetchpriority={priority ? "high" : "auto"}
+      format="avif"
+      class="h-full w-full object-cover"
+    />
+  </button>
+  <figcaption class="text-utility absolute bottom-2 left-2 bg-olive-nuit/70 px-2 py-1 text-chaux">
+    {disclaimer}
+  </figcaption>
+</figure>

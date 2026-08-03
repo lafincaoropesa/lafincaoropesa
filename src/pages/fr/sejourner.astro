@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HorizonDivider from "../../components/HorizonDivider.astro";
+import WaitlistForm from "../../components/WaitlistForm.astro";
+import StayRequestForm from "../../components/StayRequestForm.astro";
+import { SITE } from "../../config/site";
+import { getDictionary } from "../../i18n/ui";
+
+const locale = "fr" as const;
+const t = getDictionary(locale);
+const s = t.sejourner;
+
+const { lat, lng } = SITE.address;
+const delta = 0.03;
+const bbox = `${lng - delta},${lat - delta},${lng + delta},${lat + delta}`;
+const mapEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&marker=${lat},${lng}&layer=mapnik`;
+const mapLinkUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=13/${lat}/${lng}`;
+---
+
+<Layout locale={locale} routeKey="sejourner" title={s.seoTitle} description={s.seoDescription}>
+  <header class="mx-auto max-w-3xl px-4 pt-16 text-center md:pt-24">
+    <p class="text-utility mb-4 text-olive-feuille">{s.hero.kicker}</p>
+    <h1 class="mb-8 text-4xl md:text-6xl">{s.hero.title}</h1>
+  </header>
+
+  <section class="reveal mx-auto max-w-2xl px-4 py-12 text-center">
+    <h2 class="text-utility mb-4 text-olive-feuille">{s.info.title}</h2>
+    <p class="mb-1 text-3xl">{s.info.price}</p>
+    <p class="mb-6 text-sm text-olive-feuille/70">{s.info.priceNote}</p>
+    <p class="text-lg">{s.info.opening}</p>
+    <p class="text-lg">{s.info.capacity}</p>
+  </section>
+
+  <HorizonDivider />
+
+  <section class="reveal mx-auto grid max-w-5xl gap-8 px-4 py-16 md:grid-cols-2 md:py-24">
+    <div>
+      <h2 class="mb-3 text-2xl">{s.access.title}</h2>
+      <p class="mb-2 text-olive-feuille">{s.access.address}</p>
+      <p class="text-sm text-olive-feuille/70">{s.access.fromMadrid}</p>
+      <p class="text-sm text-olive-feuille/70">{s.access.fromAirport}</p>
+    </div>
+    <div>
+      <iframe
+        src={mapEmbedUrl}
+        loading="lazy"
+        class="h-64 w-full border border-olive-feuille/30 md:h-full"
+        title={s.access.title}
+      ></iframe>
+      <a href={mapLinkUrl} class="text-utility mt-2 inline-block text-ocre hover:underline" rel="noopener noreferrer">
+        OpenStreetMap →
+      </a>
+    </div>
+  </section>
+
+  <HorizonDivider />
+
+  <section class="mx-auto max-w-2xl px-4 py-16 md:py-24">
+    <div class="reveal">
+      <h2 class="mb-2 text-3xl">{s.requestForm.title}</h2>
+      <p class="mb-6 text-olive-feuille">{s.requestForm.body}</p>
+      <StayRequestForm locale={locale} />
+    </div>
+  </section>
+
+  <HorizonDivider />
+
+  <section class="mx-auto max-w-2xl px-4 py-16 md:py-24">
+    <div class="reveal bg-chaux p-6 md:p-10">
+      <h2 class="mb-2 text-3xl">{s.waitlistForm.title}</h2>
+      <p class="mb-6 text-olive-feuille">{s.waitlistForm.body}</p>
+      <WaitlistForm locale={locale} />
+    </div>
+  </section>
+</Layout>

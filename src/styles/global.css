@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* Polices auto-hébergées (Fontsource) — voir MODIFIER-LE-SITE.md si tu veux comprendre ce choix. */
+@import "@fontsource-variable/fraunces";
+@import "@fontsource/karla/400.css";
+@import "@fontsource/karla/500.css";
+@import "@fontsource/karla/700.css";
+@import "@fontsource-variable/archivo";
+
+/*
+ * Palette nommée dérivée du logo (ocre exact #CA7800).
+ * L'olive porte l'identité du site ; l'ocre n'apparaît qu'en ponctuation rare
+ * (liens, état actif, un seul trait par page) — jamais en aplat de fond.
+ */
+@theme {
+  --color-olive-nuit: #2e3524;
+  --color-olive-feuille: #5c6440;
+  --color-pierre: #dcd6c7;
+  --color-chaux: #f2efe6;
+  --color-terre-cuite: #ad8468;
+  --color-ocre: #ca7800;
+
+  --font-display: "Fraunces Variable", ui-serif, serif;
+  --font-body: "Karla", ui-sans-serif, sans-serif;
+  --font-utility: "Archivo Variable", ui-sans-serif, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-pierre text-olive-nuit font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-normal;
+  }
+
+  /* Focus clavier toujours visible — jamais supprimé pour l'esthétique. */
+  :focus-visible {
+    outline: 2px solid var(--color-ocre);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Capitales espacées — libellés, dates, tarifs, bandeau. */
+  .text-utility {
+    font-family: var(--font-utility);
+    font-variation-settings: "wdth" 118;
+    @apply uppercase tracking-[0.12em] text-sm;
+  }
+
+  /* Apparition douce au défilement (voir src/scripts/reveal.ts). */
+  .reveal {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Mise en forme minimale du contenu Markdown des pages légales. */
+  .legal-content :where(h2) {
+    @apply mb-3 mt-10 text-2xl first:mt-0;
+  }
+  .legal-content :where(p) {
+    @apply mb-4 leading-relaxed text-olive-feuille;
+  }
+  .legal-content :where(strong) {
+    @apply text-olive-nuit;
+  }
+  .legal-content :where(blockquote) {
+    @apply mb-8 border border-terre-cuite/40 bg-terre-cuite/10 p-4 text-sm;
+  }
+  .legal-content :where(ul) {
+    @apply mb-4 list-disc pl-6;
+  }
+}

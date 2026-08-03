@@ -1,0 +1,44 @@
+---
+import { SITE } from "../config/site";
+
+/** Données structurées Schema.org Hotel — incluses une fois sur la page d'accueil de chaque langue. */
+const data = {
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  name: SITE.name,
+  description:
+    "Domaine hôtelier de 15 suites au cœur d'une oliveraie de 1 200 arbres, à La Calzada de Oropesa (Tolède, Castilla-La Mancha), à 2 heures de Madrid. Ouverture prévue au printemps 2027.",
+  url: SITE.url,
+  telephone: SITE.contact.phone,
+  email: SITE.contact.email,
+  priceRange: `À partir de ${SITE.suites.priceFrom} ${SITE.suites.currency}`,
+  numberOfRooms: SITE.suites.count,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: SITE.address.line1,
+    addressLocality: SITE.address.locality,
+    addressRegion: SITE.address.region,
+    addressCountry: SITE.address.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: SITE.address.lat,
+    longitude: SITE.address.lng,
+  },
+  amenityFeature: [
+    { "@type": "LocationFeatureSpecification", name: "Spa", value: false },
+    { "@type": "LocationFeatureSpecification", name: "Restaurante farm-to-table", value: false },
+    { "@type": "LocationFeatureSpecification", name: "Oliveraie de 1 200 árboles", value: true },
+  ],
+  isAccessibleForFree: false,
+  nearbyAttraction: [
+    {
+      "@type": "City",
+      name: "Madrid",
+      description: `A ${SITE.distances.madrid.km} km / ${SITE.distances.madrid.minutes} min en coche`,
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

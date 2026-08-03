@@ -1,0 +1,241 @@
+{
+  "meta": { "htmlLang": "fr" },
+  "nav": {
+    "home": "Le Domaine",
+    "oliveraie": "L'Oliveraie",
+    "projet": "Le Projet",
+    "sejourner": "Séjourner",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "languageSwitcher": { "label": "Langue" },
+  "announcementBar": {
+    "text": "Ouverture printemps 2027",
+    "cta": "Rejoindre la liste d'attente"
+  },
+  "footer": {
+    "addressTitle": "Accès",
+    "distanceMadrid": "À 2 h de Madrid",
+    "distanceAirport": "À 2 h 10 de l'aéroport de Madrid-Barajas",
+    "contactTitle": "Contact",
+    "legalTitle": "Informations légales",
+    "legalNotice": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Politique de cookies",
+    "waitlistTitle": "Liste d'attente",
+    "waitlistText": "Sois parmi les premiers informés de l'ouverture.",
+    "copyright": "© {year} La Finca Oropesa. Tous droits réservés."
+  },
+  "home": {
+    "seoTitle": "La Finca Oropesa — Hôtel de charme au cœur d'une oliveraie, près de Madrid",
+    "seoDescription": "Un domaine de 15 suites entre 1 200 oliviers, à 2 heures de Madrid, à La Calzada de Oropesa (Tolède). Ouverture printemps 2027. Rejoignez la liste d'attente.",
+    "hero": {
+      "kicker": "La Calzada de Oropesa · 1 200 oliviers",
+      "title": "Revenir à l'essentiel",
+      "subtitle": "Un domaine en construction au cœur d'une oliveraie centenaire, à deux heures de Madrid.",
+      "cta": "Rejoindre la liste d'attente"
+    },
+    "thesis": {
+      "title": "Un domaine en construction",
+      "body": "La Finca Oropesa n'ouvre pas demain. Elle se construit, pierre après pierre, au milieu de 1 200 oliviers plantés bien avant nous. À l'ouverture, au printemps 2027, il y aura quinze suites, une table qui cuisinera ce que donne la terre, et un lieu pensé pour qu'on n'y fasse rien — et que ce rien suffise."
+    },
+    "teasers": {
+      "oliveraie": {
+        "title": "L'Oliveraie",
+        "body": "La terre, la pierre, les 1 200 oliviers tels qu'ils sont aujourd'hui, avant que rien ne change.",
+        "cta": "Découvrir l'oliveraie"
+      },
+      "projet": {
+        "title": "Le Projet",
+        "body": "Quinze suites, un spa, une table farm-to-table. Ce qui arrive.",
+        "cta": "Voir le projet"
+      },
+      "sejourner": {
+        "title": "Séjourner",
+        "body": "Tarifs, saison d'ouverture, et comment laisser ton nom sur la liste d'attente.",
+        "cta": "En savoir plus"
+      }
+    },
+    "waitlist": {
+      "title": "Liste d'attente",
+      "body": "Laisse-nous tes coordonnées, tu seras parmi les premiers informés de l'ouverture."
+    }
+  },
+  "oliveraie": {
+    "seoTitle": "L'Oliveraie — 1 200 oliviers à La Calzada de Oropesa | La Finca Oropesa",
+    "seoDescription": "La terre, la pierre et les 1 200 oliviers de La Finca Oropesa, photographiés avant la transformation du domaine en Castille-La Manche.",
+    "hero": {
+      "kicker": "L'Oliveraie",
+      "title": "Là où le temps s'arrête"
+    },
+    "intro": "Avant d'être un hôtel, ce lieu est une terre. 1 200 oliviers, certains centenaires, disposés en rangées qui suivent la pente du terrain. Ces photographies montrent la finca telle qu'elle était avant les travaux — la pierre sans retouche, les arbres non taillés pour la saison, le vrai silence de la campagne de Castille-La Manche.",
+    "sections": {
+      "trees": {
+        "title": "1 200 oliviers",
+        "body": "Chaque rangée raconte une histoire différente de la terre : le sol calcaire, la sécheresse qui trempe les racines, l'ombre courte des feuilles argentées. Rien de tout cela ne se construit — cela s'hérite."
+      },
+      "stone": {
+        "title": "La pierre et l'ancien",
+        "body": "Les murs de la finca, le sol, la structure des bâtiments d'origine : le projet s'appuie sur ce qui existe déjà, il ne le remplace pas."
+      },
+      "land": {
+        "title": "La terre de Castille-La Manche",
+        "body": "Un horizon plat, la lumière sèche de l'intérieur des terres, l'échelle du paysage manchego. C'est ce territoire qui donne forme à tout le reste."
+      }
+    },
+    "cta": {
+      "title": "Voir où va ce lieu",
+      "body": "Découvre le projet qui se construit ici.",
+      "link": "Voir le projet"
+    }
+  },
+  "projet": {
+    "seoTitle": "Le Projet — 15 suites, spa et table farm-to-table | La Finca Oropesa",
+    "seoDescription": "Quinze suites pour deux personnes, un spa, une table farm-to-table et des retraites bien-être : ce qui ouvrira à La Finca Oropesa au printemps 2027.",
+    "hero": {
+      "kicker": "Le Projet",
+      "title": "Ce qui arrive"
+    },
+    "intro": "Rien de ce qui suit n'existe encore. Ça se construit. On le décrit tel que ce sera, pas tel que c'est aujourd'hui — sans fausse photo de ce qui n'existe pas, parce qu'un projet sérieux ne se déguise pas.",
+    "suites": {
+      "title": "Quinze suites",
+      "body": "Quinze suites pour deux personnes occuperont le cœur du domaine, au milieu des oliviers. Un seul type de suite pour l'instant — la différenciation viendra plus tard, selon l'avancée des travaux.",
+      "priceNote": "Dès 400 € la nuit",
+      "detailsNote": "Superficie, équipements et vue seront publiés avant l'ouverture."
+    },
+    "spa": {
+      "title": "Le Spa",
+      "body": "Un espace pensé pour le repos réel, avec des matériaux nobles et le silence comme luxe principal."
+    },
+    "table": {
+      "title": "La Table",
+      "body": "Une cuisine farm-to-table qui servira ce que donne la finca elle-même : huile, légumes, de saison."
+    },
+    "retraites": {
+      "title": "Les Retraites",
+      "body": "Des séjours pensés pour vraiment ralentir, en petit groupe ou en solitaire. Ici, on ne fait rien — et c'est tout."
+    },
+    "cta": {
+      "title": "Réserver ta place sur la liste d'attente",
+      "body": "Suis l'avancée du projet et sois parmi les premiers informés de l'ouverture.",
+      "link": "Séjourner"
+    }
+  },
+  "sejourner": {
+    "seoTitle": "Séjourner — Tarifs, ouverture et contact | La Finca Oropesa",
+    "seoDescription": "Tarif indicatif dès 400 € la nuit, ouverture printemps 2027, à 2 heures de Madrid. Laisse ta demande ou rejoins la liste d'attente de La Finca Oropesa.",
+    "hero": {
+      "kicker": "Séjourner",
+      "title": "Loin de tout, proche de soi"
+    },
+    "info": {
+      "title": "L'essentiel",
+      "price": "Dès 400 € la nuit",
+      "priceNote": "Tarif indicatif, sujet à confirmation avant l'ouverture.",
+      "opening": "Ouverture : printemps 2027",
+      "capacity": "Quinze suites pour deux personnes"
+    },
+    "access": {
+      "title": "Accès",
+      "address": "La Viña del Capitán, La Calzada de Oropesa, Tolède, Castille-La Manche",
+      "fromMadrid": "À 2 h de route depuis Madrid",
+      "fromAirport": "À 2 h 10 de l'aéroport de Madrid-Barajas"
+    },
+    "requestForm": {
+      "title": "Demande de renseignements",
+      "body": "Raconte-nous ton projet de séjour. On te répondra dès que possible."
+    },
+    "waitlistForm": {
+      "title": "Liste d'attente",
+      "body": "Laisse-nous tes coordonnées, tu seras parmi les premiers informés de l'ouverture."
+    }
+  },
+  "spa": {
+    "seoTitle": "Le Spa — La Finca Oropesa",
+    "seoDescription": "Un espace de repos au milieu des oliviers. Page en préparation.",
+    "hero": { "kicker": "Le Projet", "title": "Le Spa" },
+    "body": "Cet espace est en cours de conception. Les photographies arriveront quand il y aura quelque chose de réel à montrer."
+  },
+  "table": {
+    "seoTitle": "La Table — La Finca Oropesa",
+    "seoDescription": "Une cuisine farm-to-table au milieu des oliviers. Page en préparation.",
+    "hero": { "kicker": "Le Projet", "title": "La Table" },
+    "body": "Cette cuisine est en cours de conception. Les photographies arriveront quand il y aura quelque chose de réel à montrer."
+  },
+  "retraites": {
+    "seoTitle": "Les Retraites — La Finca Oropesa",
+    "seoDescription": "Des retraites bien-être au milieu des oliviers. Page en préparation.",
+    "hero": { "kicker": "Le Projet", "title": "Les Retraites" },
+    "body": "Ce programme est en cours de conception. Les photographies arriveront quand il y aura quelque chose de réel à montrer."
+  },
+  "confirmation": {
+    "seoTitle": "Merci — La Finca Oropesa",
+    "seoDescription": "Confirmation de ta demande.",
+    "backHome": "Retour à l'accueil"
+  },
+  "forms": {
+    "waitlist": {
+      "title": "Liste d'attente",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse e-mail",
+      "stayPeriod": "Période de séjour envisagée",
+      "stayPeriodOptional": "(facultatif)",
+      "consent": "J'accepte que mes données soient utilisées pour recevoir des nouvelles de La Finca Oropesa, conformément à la ",
+      "consentLink": "politique de confidentialité",
+      "consentRequired": "Tu dois accepter la politique de confidentialité pour continuer.",
+      "honeypotLabel": "Laisse ce champ vide",
+      "submit": "Rejoindre la liste d'attente",
+      "submitting": "Envoi…",
+      "success": "Merci. Nous te préviendrons dès que nous aurons des nouvelles.",
+      "error": "L'envoi a échoué. Réessaie.",
+      "retry": "Réessayer",
+      "errors": {
+        "firstName": "Indique ton prénom.",
+        "lastName": "Indique ton nom.",
+        "email": "Indique une adresse e-mail valide."
+      }
+    },
+    "stayRequest": {
+      "title": "Demande de renseignements",
+      "name": "Nom et prénom",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "phoneOptional": "(facultatif)",
+      "dates": "Dates envisagées",
+      "guests": "Nombre de personnes",
+      "message": "Message",
+      "consent": "J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la ",
+      "consentLink": "politique de confidentialité",
+      "consentRequired": "Tu dois accepter la politique de confidentialité pour continuer.",
+      "honeypotLabel": "Laisse ce champ vide",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi…",
+      "success": "Merci pour ta demande. Nous te répondrons dès que possible.",
+      "error": "L'envoi a échoué. Réessaie.",
+      "retry": "Réessayer",
+      "errors": {
+        "name": "Indique ton nom.",
+        "email": "Indique une adresse e-mail valide.",
+        "dates": "Indique les dates envisagées.",
+        "guests": "Indique le nombre de personnes.",
+        "message": "Écris un message."
+      }
+    }
+  },
+  "legal": {
+    "todoBanner": "Page en préparation : cette section sera complétée avant l'ouverture du site au public.",
+    "legalNotice": { "navTitle": "Mentions légales" },
+    "privacy": { "navTitle": "Politique de confidentialité" },
+    "cookies": { "navTitle": "Politique de cookies" }
+  },
+  "photoDisclaimer": "Le domaine avant sa transformation",
+  "lightbox": {
+    "close": "Fermer (Échap)",
+    "next": "Suivant",
+    "prev": "Précédent",
+    "counter": "{current} sur {total}",
+    "open": "Agrandir la photographie"
+  }
+}

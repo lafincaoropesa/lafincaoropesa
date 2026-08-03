@@ -1,0 +1,28 @@
+---
+import { LOCALES, type Locale } from "../config/site";
+import { pathTo, type RouteKey } from "../i18n/routes";
+import { getDictionary } from "../i18n/ui";
+
+interface Props {
+  locale: Locale;
+  routeKey: RouteKey;
+}
+const { locale, routeKey } = Astro.props;
+const t = getDictionary(locale);
+
+const labels: Record<Locale, string> = { es: "ES", fr: "FR", en: "EN" };
+---
+
+<nav aria-label={t.languageSwitcher.label} class="flex items-center gap-3">
+  {
+    LOCALES.map((l) => (
+      <a
+        href={pathTo(routeKey, l)}
+        class={`text-utility ${l === locale ? "text-ocre" : "text-olive-nuit/70 hover:text-olive-nuit"}`}
+        aria-current={l === locale ? "page" : undefined}
+      >
+        {labels[l]}
+      </a>
+    ))
+  }
+</nav>

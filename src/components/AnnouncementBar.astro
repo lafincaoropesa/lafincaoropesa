@@ -1,0 +1,20 @@
+---
+import type { Locale } from "../config/site";
+import { pathTo } from "../i18n/routes";
+import { getDictionary } from "../i18n/ui";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<div class="bg-olive-nuit px-4 py-2 text-center">
+  <p class="text-utility text-chaux">
+    {t.announcementBar.text}
+    <a href={`${pathTo("sejourner", locale)}#liste-attente`} class="ml-2 underline decoration-ocre underline-offset-4 hover:text-ocre">
+      {t.announcementBar.cta}
+    </a>
+  </p>
+</div>

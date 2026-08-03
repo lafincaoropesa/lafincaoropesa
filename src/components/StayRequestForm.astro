@@ -1,0 +1,83 @@
+---
+import type { Locale } from "../config/site";
+import { getDictionary } from "../i18n/ui";
+import { pathTo } from "../i18n/routes";
+
+interface Props {
+  locale: Locale;
+  id?: string;
+}
+const { locale, id = "demande-renseignements" } = Astro.props;
+const t = getDictionary(locale);
+const f = t.forms.stayRequest;
+---
+
+<div id={id} class="reveal">
+  <form
+    method="POST"
+    action="/api/stay-request"
+    data-stay-request-form
+    data-labels={JSON.stringify({ submitting: f.submitting, success: f.success, error: f.error })}
+    class="grid gap-4 md:grid-cols-2"
+  >
+    <input type="hidden" name="locale" value={locale} />
+
+    <p class="hidden" aria-hidden="true">
+      <label>
+        {f.honeypotLabel}
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </label>
+    </p>
+
+    <label class="grid gap-1 text-sm md:col-span-2">
+      <span>{f.name}</span>
+      <input type="text" name="name" required autocomplete="name" class="border border-olive-feuille/30 bg-chaux px-3 py-2" />
+    </label>
+
+    <label class="grid gap-1 text-sm">
+      <span>{f.email}</span>
+      <input type="email" name="email" required autocomplete="email" class="border border-olive-feuille/30 bg-chaux px-3 py-2" />
+    </label>
+
+    <label class="grid gap-1 text-sm">
+      <span>
+        {f.phone} <span class="text-olive-feuille/70">{f.phoneOptional}</span>
+      </span>
+      <input type="tel" name="phone" autocomplete="tel" class="border border-olive-feuille/30 bg-chaux px-3 py-2" />
+    </label>
+
+    <label class="grid gap-1 text-sm">
+      <span>{f.dates}</span>
+      <input type="text" name="dates" required class="border border-olive-feuille/30 bg-chaux px-3 py-2" />
+    </label>
+
+    <label class="grid gap-1 text-sm">
+      <span>{f.guests}</span>
+      <input type="number" name="guests" min="1" max="2" required class="border border-olive-feuille/30 bg-chaux px-3 py-2" />
+    </label>
+
+    <label class="grid gap-1 text-sm md:col-span-2">
+      <span>{f.message}</span>
+      <textarea name="message" required rows="4" class="border border-olive-feuille/30 bg-chaux px-3 py-2"></textarea>
+    </label>
+
+    <label class="flex items-start gap-2 text-sm md:col-span-2">
+      <input type="checkbox" name="consent" required class="mt-1" />
+      <span>
+        {f.consent}
+        <a href={pathTo("privacidad", locale)} class="underline hover:text-ocre">{f.consentLink}</a>
+      </span>
+    </label>
+
+    <div class="md:col-span-2">
+      <button type="submit" class="text-utility border border-olive-nuit px-6 py-3 hover:bg-olive-nuit hover:text-chaux">
+        {f.submit}
+      </button>
+      <p class="form-feedback mt-2 text-sm" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</div>
+
+<script>
+  import "../scripts/forms";
+</script>

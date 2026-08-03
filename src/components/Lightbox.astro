@@ -1,0 +1,54 @@
+---
+/**
+ * Visionneuse plein écran unique, montée une fois dans Layout.astro.
+ * S'ouvre sur tout élément marqué data-lightbox-trigger (voir Photo.astro).
+ * Navigation clavier : flèches gauche/droite, Échap pour fermer.
+ */
+interface Props {
+  closeLabel: string;
+  nextLabel: string;
+  prevLabel: string;
+}
+const { closeLabel, nextLabel, prevLabel } = Astro.props;
+---
+
+<div
+  id="lightbox"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-olive-nuit/95 p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+>
+  <button
+    id="lightbox-close"
+    type="button"
+    class="text-utility absolute right-4 top-4 text-chaux"
+    aria-label={closeLabel}
+  >
+    ✕
+  </button>
+  <button
+    id="lightbox-prev"
+    type="button"
+    class="text-utility absolute left-4 top-1/2 -translate-y-1/2 text-chaux"
+    aria-label={prevLabel}
+  >
+    ←
+  </button>
+  <figure class="flex max-h-full max-w-full flex-col items-center gap-3">
+    <img id="lightbox-image" src="" alt="" class="max-h-[85vh] max-w-full object-contain" />
+    <figcaption id="lightbox-caption" class="text-utility text-chaux"></figcaption>
+  </figure>
+  <button
+    id="lightbox-next"
+    type="button"
+    class="text-utility absolute right-4 top-1/2 -translate-y-1/2 text-chaux"
+    aria-label={nextLabel}
+  >
+    →
+  </button>
+</div>
+
+<script>
+  import "../scripts/lightbox";
+</script>

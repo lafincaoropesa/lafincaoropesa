@@ -1,0 +1,33 @@
+---
+import { getEntry, render } from "astro:content";
+import type { Locale } from "../../config/site";
+import { getDictionary } from "../../i18n/ui";
+
+interface Props {
+  locale: Locale;
+  docKey: "legal-notice" | "privacy" | "cookies";
+}
+const { locale, docKey } = Astro.props;
+const t = getDictionary(locale);
+
+const entry = await getEntry("legal", `${locale}/${docKey}`);
+if (!entry) {
+  throw new Error(`Document légal introuvable : legal/${locale}/${docKey}`);
+}
+const { Content } = await render(entry);
+---
+
+<header class="mx-auto max-w-2xl px-4 pt-16 md:pt-24">
+  <h1 class="mb-8 text-4xl">{entry.data.title}</h1>
+</header>
+
+<div class="legal-content mx-auto max-w-2xl px-4 pb-16 md:pb-24">
+  {
+    entry.data.todo && (
+      <p class="mb-8 border border-terre-cuite/40 bg-terre-cuite/10 p-4 text-sm" role="status">
+        {t.legal.todoBanner}
+      </p>
+    )
+  }
+  <Content />
+</div>

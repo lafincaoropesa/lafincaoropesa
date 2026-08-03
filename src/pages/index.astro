@@ -1,0 +1,16 @@
+---
+// Route rendue à la demande (non statique) pour pouvoir lire l'en-tête Accept-Language
+// et rediriger vers la bonne langue sans dépendre de JavaScript. Repli sur /es/.
+export const prerender = false;
+
+import { LOCALES, DEFAULT_LOCALE, type Locale } from "../config/site";
+import { pathTo } from "../i18n/routes";
+
+const acceptLanguage = Astro.request.headers.get("accept-language") ?? "";
+const preferred = acceptLanguage
+  .split(",")
+  .map((part) => part.split(";")[0]?.trim().slice(0, 2).toLowerCase())
+  .find((code): code is Locale => LOCALES.includes(code as Locale));
+
+return Astro.redirect(pathTo("home", preferred ?? DEFAULT_LOCALE), 302);
+---

@@ -1,0 +1,102 @@
+---
+import type { Locale } from "../config/site";
+import { pathTo, ROUTES, type RouteKey } from "../i18n/routes";
+import { getDictionary } from "../i18n/ui";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import symboleSvg from "../assets/logo/lafincaoropesa-symbole.svg?raw";
+import wordmarkSvg from "../assets/logo/lafincaoropesa-wordmark.svg?raw";
+
+interface Props {
+  locale: Locale;
+  routeKey: RouteKey;
+  transparent?: boolean;
+}
+const { locale, routeKey, transparent = false } = Astro.props;
+const t = getDictionary(locale);
+
+const navItems: { key: RouteKey; label: string }[] = [
+  { key: "oliveraie", label: t.nav.oliveraie },
+  { key: "projet", label: t.nav.projet },
+  { key: "sejourner", label: t.nav.sejourner },
+];
+---
+
+<header
+  class:list={[
+    "top-0 z-40 w-full",
+    transparent
+      ? "absolute inset-x-0 bg-transparent text-chaux"
+      : "sticky bg-pierre text-olive-nuit border-b border-olive-feuille/15",
+  ]}
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+    <a href={pathTo("home", locale)} class="flex items-center gap-3" aria-label={t.nav.home}>
+      <span class="h-10 w-10 md:hidden [&>svg]:h-full [&>svg]:w-full" set:html={symboleSvg} />
+      <span class="hidden h-8 w-auto md:block [&>svg]:h-full [&>svg]:w-auto" set:html={wordmarkSvg} />
+    </a>
+
+    <nav class="hidden items-center gap-6 md:flex" aria-label="Principal">
+      {
+        navItems.map((item) => (
+          <a
+            href={pathTo(item.key, locale)}
+            class:list={[
+              "text-utility",
+              routeKey === item.key ? "text-ocre" : "hover:text-ocre",
+            ]}
+            aria-current={routeKey === item.key ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <LanguageSwitcher locale={locale} routeKey={routeKey} />
+      <button
+        type="button"
+        id="mobile-menu-toggle"
+        class="text-utility md:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span id="mobile-menu-toggle-label">{t.nav.menuOpen}</span>
+      </button>
+    </div>
+  </div>
+
+  <nav
+    id="mobile-menu"
+    class="hidden flex-col gap-1 border-t border-olive-feuille/15 bg-pierre px-4 py-3 text-olive-nuit md:hidden"
+    aria-label="Principal (mobile)"
+  >
+    {
+      navItems.map((item) => (
+        <a href={pathTo(item.key, locale)} class="text-utility py-2">
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  function initMobileMenu(): void {
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const label = document.getElementById("mobile-menu-toggle-label");
+    if (!toggle || !menu || !label) return;
+
+    const openLabel = label.textContent ?? "";
+
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      menu.classList.toggle("hidden", isOpen);
+      menu.classList.toggle("flex", !isOpen);
+    });
+  }
+
+  initMobileMenu();
+</script>

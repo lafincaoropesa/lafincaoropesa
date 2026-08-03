@@ -1,0 +1,37 @@
+---
+/**
+ * Élément signature du site : les rangs de l'oliveraie vus en perspective,
+ * réduits à des traits fins qui convergent vers un horizon. Sert de séparateur
+ * de section partout sur le site — le seul motif décoratif du design.
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+
+const rowCount = 9;
+const width = 1200;
+const height = 72;
+const vanishX = width / 2;
+const vanishY = 0;
+const baseSpread = width * 0.9;
+
+const lines = Array.from({ length: rowCount }, (_, i) => {
+  const t = i / (rowCount - 1);
+  const startX = vanishX - baseSpread / 2 + t * baseSpread;
+  return { x1: startX, y1: height, x2: vanishX, y2: vanishY };
+});
+---
+
+<div class={`w-full overflow-hidden ${className}`} role="presentation" aria-hidden="true">
+  <svg
+    viewBox={`0 0 ${width} ${height}`}
+    preserveAspectRatio="none"
+    class="h-12 w-full text-olive-feuille/40 md:h-16"
+  >
+    {lines.map((l) => (
+      <line x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2} stroke="currentColor" stroke-width="1" />
+    ))}
+    <line x1="0" y1={height - 1} x2={width} y2={height - 1} stroke="currentColor" stroke-width="1" />
+  </svg>
+</div>

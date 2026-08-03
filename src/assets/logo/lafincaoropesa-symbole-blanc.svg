@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- PLACEHOLDER — variante monochrome blanche pour fonds sombres. À remplacer en même temps que le symbole. -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#F2EFE6" stroke-width="4"/>
+  <g fill="none" stroke="#F2EFE6" stroke-width="4" stroke-linecap="round">
+    <path d="M100 145 V70"/>
+    <path d="M100 128 C 78 122, 66 104, 70 84"/>
+    <path d="M100 110 C 122 104, 134 90, 130 72"/>
+    <path d="M100 92 C 82 86, 74 74, 78 60"/>
+    <ellipse cx="106" cy="66" rx="7" ry="10" fill="#F2EFE6" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HorizonDivider from "../../components/HorizonDivider.astro";
+import { pathTo } from "../../i18n/routes";
+import { getDictionary } from "../../i18n/ui";
+
+const locale = "es" as const;
+const t = getDictionary(locale);
+const p = t.projet;
+const chapters: { title: string; body: string; priceNote?: string; detailsNote?: string }[] = [
+  p.suites,
+  p.spa,
+  p.table,
+  p.retraites,
+];
+---
+
+<Layout locale={locale} routeKey="projet" title={p.seoTitle} description={p.seoDescription}>
+  <header class="mx-auto max-w-3xl px-4 pt-16 text-center md:pt-24">
+    <p class="text-utility mb-4 text-olive-feuille">{p.hero.kicker}</p>
+    <h1 class="mb-8 text-4xl md:text-6xl">{p.hero.title}</h1>
+  </header>
+
+  <p class="reveal mx-auto max-w-2xl px-4 pb-16 text-center text-lg leading-relaxed text-olive-feuille md:pb-24">
+    {p.intro}
+  </p>
+
+  <HorizonDivider />
+
+  <div class="mx-auto max-w-3xl divide-y divide-olive-feuille/20 px-4">
+    {
+      chapters.map((chapter) => (
+        <article class="reveal py-12">
+          <span class="mb-4 flex h-2 w-24 [&>span]:flex-1" aria-hidden="true">
+            <span class="bg-pierre" />
+            <span class="bg-terre-cuite" />
+            <span class="bg-olive-feuille" />
+          </span>
+          <h2 class="mb-2 text-2xl">{chapter.title}</h2>
+          <p class="text-olive-feuille leading-relaxed">{chapter.body}</p>
+          {chapter.priceNote && <p class="text-utility mt-4 text-ocre">{chapter.priceNote}</p>}
+          {chapter.detailsNote && <p class="mt-1 text-sm text-olive-feuille/70">{chapter.detailsNote}</p>}
+        </article>
+      ))
+    }
+  </div>
+
+  <HorizonDivider />
+
+  <section class="reveal mx-auto max-w-xl px-4 py-16 text-center md:py-24">
+    <h2 class="mb-3 text-3xl">{p.cta.title}</h2>
+    <p class="mb-6 text-olive-feuille">{p.cta.body}</p>
+    <a href={pathTo("sejourner", locale)} class="text-utility border border-olive-nuit px-6 py-3 hover:bg-olive-nuit hover:text-chaux">
+      {p.cta.link}
+    </a>
+  </section>
+</Layout>

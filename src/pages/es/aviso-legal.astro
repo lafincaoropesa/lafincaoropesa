@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LegalPageContent from "../../components/templates/LegalPageContent.astro";
+import { getDictionary } from "../../i18n/ui";
+
+const locale = "es" as const;
+const t = getDictionary(locale);
+---
+
+<Layout
+  locale={locale}
+  routeKey="legal"
+  title={`${t.legal.legalNotice.navTitle} — La Finca Oropesa`}
+  description="Información legal de La Finca Oropesa."
+>
+  <LegalPageContent locale={locale} docKey="legal-notice" />
+</Layout>

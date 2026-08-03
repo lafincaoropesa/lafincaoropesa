@@ -1,0 +1,76 @@
+---
+import type { Locale } from "../config/site";
+import { SITE } from "../config/site";
+import { pathTo } from "../i18n/routes";
+import { getDictionary } from "../i18n/ui";
+import logoSvg from "../assets/logo/lafincaoropesa-logo.svg?raw";
+import WaitlistForm from "./WaitlistForm.astro";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-olive-nuit px-4 py-12 text-chaux md:px-8">
+  <div class="mx-auto mb-12 max-w-6xl bg-chaux p-6 text-olive-nuit md:p-8">
+    <h2 class="font-display mb-2 text-2xl">{t.footer.waitlistTitle}</h2>
+    <p class="mb-6 text-sm text-olive-feuille">{t.footer.waitlistText}</p>
+    <WaitlistForm locale={locale} id="liste-attente-footer" compact />
+  </div>
+
+  <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
+    <div>
+      <span class="block h-10 w-auto [&>svg]:h-full [&>svg]:w-auto [&>svg_text]:fill-chaux" set:html={logoSvg} />
+    </div>
+
+    <div>
+      <h2 class="text-utility mb-3 text-chaux/70">{t.footer.addressTitle}</h2>
+      <p class="font-body text-sm">
+        {SITE.address.line1}<br />
+        {SITE.address.locality}, {SITE.address.province}<br />
+        {SITE.address.region}
+      </p>
+      <p class="mt-2 text-sm text-chaux/70">{t.footer.distanceMadrid}</p>
+      <p class="text-sm text-chaux/70">{t.footer.distanceAirport}</p>
+    </div>
+
+    <div>
+      <h2 class="text-utility mb-3 text-chaux/70">{t.footer.contactTitle}</h2>
+      <p class="text-sm">
+        <a href={`mailto:${SITE.contact.email}`} class="hover:text-ocre">{SITE.contact.email}</a>
+      </p>
+      <p class="text-sm">
+        <a href={`tel:${SITE.contact.phone.replace(/\s+/g, "")}`} class="hover:text-ocre">{SITE.contact.phone}</a>
+      </p>
+      {
+        SITE.socialLinks.length > 0 && (
+          <ul class="mt-3 flex gap-3">
+            {SITE.socialLinks.map((s) => (
+              <li>
+                <a href={s.url} class="text-sm hover:text-ocre" rel="noopener noreferrer">
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+
+    <div>
+      <h2 class="text-utility mb-3 text-chaux/70">{t.footer.legalTitle}</h2>
+      <ul class="space-y-1 text-sm">
+        <li><a href={pathTo("legal", locale)} class="hover:text-ocre">{t.footer.legalNotice}</a></li>
+        <li><a href={pathTo("privacidad", locale)} class="hover:text-ocre">{t.footer.privacy}</a></li>
+        <li><a href={pathTo("cookies", locale)} class="hover:text-ocre">{t.footer.cookies}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="mx-auto mt-10 max-w-6xl text-xs text-chaux/50">
+    {t.footer.copyright.replace("{year}", String(year))}
+  </p>
+</footer>

@@ -1,0 +1,13 @@
+---
+export const prerender = false;
+import Layout from "../../layouts/Layout.astro";
+import ConfirmationContent from "../../components/templates/ConfirmationContent.astro";
+import { getDictionary } from "../../i18n/ui";
+
+const locale = "es" as const;
+const t = getDictionary(locale);
+---
+
+<Layout locale={locale} routeKey="confirmation" title={t.confirmation.seoTitle} description={t.confirmation.seoDescription}>
+  <ConfirmationContent locale={locale} />
+</Layout>
