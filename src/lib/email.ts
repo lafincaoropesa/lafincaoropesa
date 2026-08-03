@@ -5,7 +5,9 @@ import type { Locale } from "../config/site";
 import type { WaitlistInput, StayRequestInput } from "./validation";
 
 function getResend(): Resend {
-  const apiKey = process.env.RESEND_API_KEY;
+  // En dev, Astro/Vite charge .env dans import.meta.env (pas dans process.env brut).
+  // En production sur Vercel, la variable d'environnement arrive via process.env.
+  const apiKey = import.meta.env.RESEND_API_KEY ?? process.env.RESEND_API_KEY;
   if (!apiKey) {
     throw new Error(
       "RESEND_API_KEY manquante. Voir DEPLOIEMENT.md pour configurer la variable d'environnement sur Vercel.",
