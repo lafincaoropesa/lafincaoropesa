@@ -1,43 +1,24 @@
-# Astro Starter Kit: Minimal
+# La Finca Oropesa
 
-```sh
-npm create astro@latest -- --template minimal
+Site vitrine multilingue (ES/FR/EN) de La Finca Oropesa, domaine hôtelier en construction à La Calzada de Oropesa (Tolède, Espagne). Astro + TypeScript + Tailwind CSS, contenu en Markdown/JSON, déployé sur Vercel.
+
+- Pour changer un texte, une photo, un tarif : voir [MODIFIER-LE-SITE.md](MODIFIER-LE-SITE.md).
+- Pour mettre le site en ligne (Vercel + OVH) : voir [DEPLOIEMENT.md](DEPLOIEMENT.md).
+
+## Développement
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Le site est alors disponible sur `http://localhost:4321`.
 
-## 🚀 Project Structure
+## Commandes
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Commande | Action |
+| :--- | :--- |
+| `npm run dev` | Serveur de développement |
+| `npm run build` | Build de production (bloque si des pages légales ont un TODO) |
+| `npm run preview` | Prévisualiser le build de production |
+| `npm run icons` | Régénère les favicons à partir du symbole du logo |
