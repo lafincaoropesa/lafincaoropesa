@@ -23,15 +23,17 @@ const teasers = [
 
 <Layout locale={locale} routeKey="home" title={h.seoTitle} description={h.seoDescription} includeStructuredData>
   <section>
-    <div class="aspect-[16/9] w-full overflow-hidden">
-      <Photo
-        src={vueAerienne}
-        alt={t.photoAlt.vueAerienne}
-        disclaimer={t.photoDisclaimer}
-        priority
-        group="home-hero"
-        class="h-full w-full"
-      />
+    <div class="bg-pierre pt-10 md:pt-14">
+      <div class="mx-auto aspect-[4/3] w-full max-w-md overflow-hidden px-4 md:max-w-lg">
+        <Photo
+          src={vueAerienne}
+          alt={t.photoAlt.vueAerienne}
+          disclaimer={t.photoDisclaimer}
+          priority
+          group="home-hero"
+          class="h-full w-full"
+        />
+      </div>
     </div>
     <div class="bg-olive-nuit px-4 py-12 text-center text-chaux md:py-20">
       <p class="text-utility mb-4 text-chaux/70">{h.hero.kicker}</p>
