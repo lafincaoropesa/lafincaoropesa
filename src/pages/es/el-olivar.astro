@@ -1,15 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PhotoPlaceholder from "../../components/PhotoPlaceholder.astro";
+import Photo from "../../components/Photo.astro";
 import HorizonDivider from "../../components/HorizonDivider.astro";
 import { pathTo } from "../../i18n/routes";
 import { getDictionary } from "../../i18n/ui";
+import rangeesOliviers from "../../assets/photos/oliveraie/rangees-oliviers-horizon.png";
+import patioArcades from "../../assets/photos/oliveraie/patio-arcades-pierre.png";
+import vueAerienne from "../../assets/photos/domaine/vue-aerienne-finca.png";
 
 const locale = "es" as const;
 const t = getDictionary(locale);
 const p = t.oliveraie;
 const sectionKeys = ["trees", "stone", "land"] as const;
 const ratios = ["4/5", "3/2", "4/5"] as const;
+const photos = {
+  trees: { src: rangeesOliviers, alt: t.photoAlt.oliviers },
+  stone: { src: patioArcades, alt: t.photoAlt.patio },
+  land: { src: vueAerienne, alt: t.photoAlt.vueAerienne },
+};
 ---
 
 <Layout locale={locale} routeKey="oliveraie" title={p.seoTitle} description={p.seoDescription}>
@@ -28,7 +36,9 @@ const ratios = ["4/5", "3/2", "4/5"] as const;
     {
       sectionKeys.map((key, i) => (
         <div class:list={["reveal grid gap-8 py-12 md:grid-cols-2 md:items-center", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
-          <PhotoPlaceholder ratio={ratios[i]} label={p.sections[key].title} />
+          <div class="overflow-hidden" style={`aspect-ratio: ${ratios[i]};`}>
+            <Photo src={photos[key].src} alt={photos[key].alt} disclaimer={t.photoDisclaimer} group="oliveraie" class="h-full w-full" />
+          </div>
           <div>
             <h2 class="mb-3 text-2xl">{p.sections[key].title}</h2>
             <p class="text-olive-feuille leading-relaxed">{p.sections[key].body}</p>

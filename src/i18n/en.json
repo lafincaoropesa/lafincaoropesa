@@ -1,5 +1,13 @@
 {
   "meta": { "htmlLang": "en" },
+  "photoAlt": {
+    "vueAerienne": "Aerial view of the estate surrounded by olive trees",
+    "oliviers": "Row of olive trees in the evening light",
+    "patio": "Interior patio with arches and red columns",
+    "piscine": "Pool bordered by olive trees",
+    "facade": "White facade of the estate, with cypress trees",
+    "chene": "Century-old holm oak in the estate's grounds"
+  },
   "nav": {
     "home": "The Estate",
     "oliveraie": "The Olive Grove",

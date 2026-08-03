@@ -1,5 +1,13 @@
 {
   "meta": { "htmlLang": "fr" },
+  "photoAlt": {
+    "vueAerienne": "Vue aérienne de la finca entourée d'oliviers",
+    "oliviers": "Rangée d'oliviers dans la lumière du soir",
+    "patio": "Patio intérieur aux arcades et colonnes rouges",
+    "piscine": "Piscine bordée d'oliviers",
+    "facade": "Façade blanche de la finca, cyprès",
+    "chene": "Chêne centenaire dans le parc du domaine"
+  },
   "nav": {
     "home": "Le Domaine",
     "oliveraie": "L'Oliveraie",

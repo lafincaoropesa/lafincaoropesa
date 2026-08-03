@@ -1,10 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Photo from "../../components/Photo.astro";
 import HorizonDivider from "../../components/HorizonDivider.astro";
 import WaitlistForm from "../../components/WaitlistForm.astro";
 import StayRequestForm from "../../components/StayRequestForm.astro";
 import { SITE } from "../../config/site";
 import { getDictionary } from "../../i18n/ui";
+import facadeAvant from "../../assets/photos/domaine/facade-avant.png";
 
 const locale = "fr" as const;
 const t = getDictionary(locale);
@@ -22,6 +24,10 @@ const mapLinkUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=1
     <p class="text-utility mb-4 text-olive-feuille">{s.hero.kicker}</p>
     <h1 class="mb-8 text-4xl md:text-6xl">{s.hero.title}</h1>
   </header>
+
+  <div class="reveal mx-auto aspect-[3/2] max-w-3xl overflow-hidden px-4">
+    <Photo src={facadeAvant} alt={t.photoAlt.facade} disclaimer={t.photoDisclaimer} group="sejourner" class="h-full w-full" />
+  </div>
 
   <section class="reveal mx-auto max-w-2xl px-4 py-12 text-center">
     <h2 class="text-utility mb-4 text-olive-feuille">{s.info.title}</h2>

@@ -1,5 +1,13 @@
 {
   "meta": { "htmlLang": "es" },
+  "photoAlt": {
+    "vueAerienne": "Vista aérea de la finca rodeada de olivos",
+    "oliviers": "Hilera de olivos bajo la luz de la tarde",
+    "patio": "Patio interior con arcadas y columnas rojas",
+    "piscine": "Piscina bordeada de olivos",
+    "facade": "Fachada blanca de la finca, con cipreses",
+    "chene": "Encina centenaria en el parque del dominio"
+  },
   "nav": {
     "home": "El Dominio",
     "oliveraie": "El Olivar",

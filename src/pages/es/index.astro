@@ -1,25 +1,38 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PhotoPlaceholder from "../../components/PhotoPlaceholder.astro";
+import Photo from "../../components/Photo.astro";
 import HorizonDivider from "../../components/HorizonDivider.astro";
 import WaitlistForm from "../../components/WaitlistForm.astro";
 import { pathTo } from "../../i18n/routes";
 import { getDictionary } from "../../i18n/ui";
+import vueAerienne from "../../assets/photos/domaine/vue-aerienne-finca.png";
+import rangeesOliviers from "../../assets/photos/oliveraie/rangees-oliviers-horizon.png";
+import cheneEtParc from "../../assets/photos/domaine/chene-et-parc.png";
+import piscine from "../../assets/photos/domaine/piscine.png";
 
 const locale = "es" as const;
 const t = getDictionary(locale);
 const h = t.home;
 
 const teasers = [
-  { key: "oliveraie" as const, data: h.teasers.oliveraie, ratio: "4/5" as const },
-  { key: "projet" as const, data: h.teasers.projet, ratio: "3/4" as const },
-  { key: "sejourner" as const, data: h.teasers.sejourner, ratio: "1/1" as const },
+  { key: "oliveraie" as const, data: h.teasers.oliveraie, ratio: "4/5" as const, src: rangeesOliviers, alt: t.photoAlt.oliviers },
+  { key: "projet" as const, data: h.teasers.projet, ratio: "3/4" as const, src: cheneEtParc, alt: t.photoAlt.chene },
+  { key: "sejourner" as const, data: h.teasers.sejourner, ratio: "1/1" as const, src: piscine, alt: t.photoAlt.piscine },
 ];
 ---
 
 <Layout locale={locale} routeKey="home" title={h.seoTitle} description={h.seoDescription} includeStructuredData>
   <section>
-    <PhotoPlaceholder ratio="16/9" label="El Dominio — vista general de la finca" class="w-full" />
+    <div class="aspect-[16/9] w-full overflow-hidden">
+      <Photo
+        src={vueAerienne}
+        alt={t.photoAlt.vueAerienne}
+        disclaimer={t.photoDisclaimer}
+        priority
+        group="home-hero"
+        class="h-full w-full"
+      />
+    </div>
     <div class="bg-olive-nuit px-4 py-12 text-center text-chaux md:py-20">
       <p class="text-utility mb-4 text-chaux/70">{h.hero.kicker}</p>
       <h1 class="mb-4 text-4xl md:text-6xl">{h.hero.title}</h1>
@@ -43,7 +56,15 @@ const teasers = [
     {
       teasers.map((teaser) => (
         <a href={pathTo(teaser.key, locale)} class="reveal group block">
-          <PhotoPlaceholder ratio={teaser.ratio} label={teaser.data.title} />
+          <div class="overflow-hidden" style={`aspect-ratio: ${teaser.ratio};`}>
+            <Photo
+              src={teaser.src}
+              alt={teaser.alt}
+              disclaimer={t.photoDisclaimer}
+              group="home-teasers"
+              class="h-full w-full transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
           <h2 class="mt-4 text-2xl">{teaser.data.title}</h2>
           <p class="mt-2 text-olive-feuille">{teaser.data.body}</p>
           <span class="text-utility mt-3 inline-block text-ocre group-hover:underline">{teaser.data.cta} →</span>
