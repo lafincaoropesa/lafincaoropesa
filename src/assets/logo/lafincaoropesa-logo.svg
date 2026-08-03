@@ -10,5 +10,5 @@
       <ellipse cx="106" cy="66" rx="7" ry="10" fill="#CA7800" stroke="none"/>
     </g>
   </g>
-  <text x="220" y="115" font-family="Fraunces, serif" font-size="52" fill="#2E3524">La Finca Oropesa</text>
+  <text x="220" y="115" font-family="'Fraunces Variable', Fraunces, serif" font-size="52" fill="#2E3524">La Finca Oropesa</text>
 </svg>
