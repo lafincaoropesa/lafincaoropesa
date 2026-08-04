@@ -121,6 +121,15 @@ Remplace chaque `[TODO: ...]` dans le texte par la donnée réelle (raison socia
 
 La commande `npm run build` (utilisée aussi par Vercel à chaque déploiement) exécute d'abord un script qui vérifie qu'aucun document légal n'a `todo: true`. S'il en reste, le build échoue avec la liste exacte des fichiers à compléter. C'est volontaire : en Espagne, la loi (LSSI-CE) impose ces mentions dès la mise en ligne d'un site à finalité commerciale. Le site peut être développé et prévisualisé (`npm run dev`) sans ces données ; il ne peut pas être publié sans elles.
 
+### Contournement temporaire (avant l'ouverture uniquement)
+
+Si tu dois mettre le site en ligne en avant-première (par exemple pour montrer le résultat) alors que le NIF/CIF dédié à La Finca Oropesa n'existe pas encore, tu peux désactiver temporairement cette vérification :
+
+1. Sur Vercel : **Project Settings → Environment Variables** → ajoute `SKIP_LEGAL_CHECK` = `true`.
+2. Redéploie.
+
+**⚠️ Retire impérativement cette variable avant l'ouverture réelle au public.** Tant qu'elle est active, le site peut rester en ligne sans mentions légales conformes à la loi espagnole — ce n'est acceptable que pour une période de pré-ouverture avec liste d'attente, jamais pour la mise en service commerciale complète.
+
 ## Ajouter une quatrième langue (par exemple le portugais)
 
 1. Copie `src/i18n/es.json` en `src/i18n/pt.json` et traduis/adapte chaque texte.
