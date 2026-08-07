@@ -1,0 +1,46 @@
+---
+/**
+ * Section « L'architecte d'intérieur » (Tomás Alía), page Le Projet.
+ *
+ * Masquée tant que SITE.showDesignerSection est à false. Pour l'activer :
+ *   1. Déposer le portrait et les visuels de référence dans src/assets/photos/architecte/
+ *      (fournis par Tomás Alía / studio Caramba, avec les droits d'usage web).
+ *   2. Remplacer les <PhotoPlaceholder> ci-dessous par <Photo>, comme expliqué dans
+ *      src/assets/photos/README.md.
+ *   3. Passer SITE.showDesignerSection à true dans src/config/site.ts.
+ *
+ * Règle éditoriale : les visuels de référence montrent d'AUTRES projets de l'architecte.
+ * La mention `referencesNote` doit rester affichée pour qu'aucun visiteur ne les confonde
+ * avec les futures suites de La Finca Oropesa.
+ */
+import type { Locale } from "../../config/site";
+import { getDictionary } from "../../i18n/ui";
+import PhotoPlaceholder from "../PhotoPlaceholder.astro";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const d = t.projet.designer;
+---
+
+<section class="mx-auto max-w-5xl px-4 py-16 md:py-24">
+  <div class="reveal grid gap-8 md:grid-cols-[2fr_3fr] md:items-center">
+    <PhotoPlaceholder ratio="4/5" label={d.portraitAlt} />
+    <div>
+      <h2 class="mb-3 text-2xl">{d.title}</h2>
+      <p class="leading-relaxed text-olive-feuille">{d.body}</p>
+    </div>
+  </div>
+
+  <div class="reveal mt-14">
+    <h3 class="text-utility mb-4 text-olive-feuille">{d.referencesTitle}</h3>
+    <div class="grid gap-6 md:grid-cols-3">
+      <PhotoPlaceholder ratio="3/2" label="Tomás Alía — référence 1" />
+      <PhotoPlaceholder ratio="3/2" label="Tomás Alía — référence 2" />
+      <PhotoPlaceholder ratio="3/2" label="Tomás Alía — référence 3" />
+    </div>
+    <p class="mt-3 text-sm text-olive-feuille/80">{d.referencesNote}</p>
+  </div>
+</section>

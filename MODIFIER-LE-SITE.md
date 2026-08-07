@@ -94,6 +94,17 @@ Pour publier par exemple la page Spa une fois les photos disponibles :
 
 Même procédure pour `table` (slugs `la-mesa` / `la-table` / `the-table`) et `retraites` (`los-retiros` / `les-retraites` / `the-retreats`).
 
+## Activer la section « L'architecte d'intérieur »
+
+La page Le Projet contient une section prête sur Tomás Alía (portrait + réalisations de référence), actuellement masquée faute de visuels. Pour l'activer :
+
+1. Demande à Tomás Alía / studio Caramba un portrait officiel et 2-3 visuels de ses projets, **avec l'autorisation écrite d'usage web** pour lafincaoropesa.com.
+2. Dépose les fichiers dans `src/assets/photos/architecte/`.
+3. Dans `src/components/templates/DesignerSection.astro`, remplace les `<PhotoPlaceholder>` par des `<Photo>` (voir `src/assets/photos/README.md` pour la syntaxe).
+4. Dans `src/config/site.ts`, passe `showDesignerSection` à `true`.
+
+**Ne supprime pas la mention sous les visuels de référence** (« Projets antérieurs de Tomás Alía… Aucune de ces images ne représente La Finca Oropesa »). Elle évite qu'un visiteur prenne les intérieurs d'un autre hôtel pour tes futures suites — c'est le même principe que la mention « avant transformation » sur les photos du domaine.
+
 ## Pages légales
 
 Les trois pages légales sont des fichiers Markdown, un par langue et par document, dans `src/content/legal/` :

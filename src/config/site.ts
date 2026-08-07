@@ -53,6 +53,11 @@ export const SITE = {
     retraites: false,
   },
 
+  // Section « L'architecte d'intérieur » (Tomás Alía) sur la page Le Projet.
+  // Passer à `true` une fois le portrait et les visuels de référence déposés dans
+  // src/assets/photos/architecte/ — voir MODIFIER-LE-SITE.md, section "Architecte d'intérieur".
+  showDesignerSection: false,
+
   // Réseaux sociaux : aucun pour l'instant. Structure prête à recevoir des entrées
   // ({ label: 'Instagram', url: '...' }) sans changement de composant.
   socialLinks: [] as { label: string; url: string }[],

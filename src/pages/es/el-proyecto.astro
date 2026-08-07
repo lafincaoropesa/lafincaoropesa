@@ -1,6 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import HorizonDivider from "../../components/HorizonDivider.astro";
+import DesignerSection from "../../components/templates/DesignerSection.astro";
+import { SITE } from "../../config/site";
 import { pathTo } from "../../i18n/routes";
 import { getDictionary } from "../../i18n/ui";
 
@@ -44,6 +46,15 @@ const chapters: { title: string; body: string; priceNote?: string; detailsNote?:
       ))
     }
   </div>
+
+  {
+    SITE.showDesignerSection && (
+      <>
+        <HorizonDivider />
+        <DesignerSection locale={locale} />
+      </>
+    )
+  }
 
   <HorizonDivider />
 
