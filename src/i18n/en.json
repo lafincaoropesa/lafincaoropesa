@@ -39,14 +39,35 @@
     "seoTitle": "La Finca Oropesa — Luxury olive grove retreat near Madrid, Spain",
     "seoDescription": "A 15-suite estate among 1,200 olive trees, 2 hours from Madrid, in La Calzada de Oropesa (Toledo). Opening spring 2027. Join the waiting list.",
     "hero": {
-      "kicker": "La Calzada de Oropesa · 1,200 olive trees",
+      "kicker": "La Calzada de Oropesa, Toledo · Opening spring 2027",
       "title": "Return to what matters",
-      "subtitle": "An estate under construction inside a century-old olive grove, two hours from Madrid.",
+      "subtitle": "An estate under construction inside a century-old olive grove, facing the Sierra de Gredos, two hours from Madrid.",
       "cta": "Join the waiting list"
     },
     "thesis": {
       "title": "An estate under construction",
-      "body": "La Finca Oropesa doesn't open tomorrow. It is being built, stone by stone, among 1,200 olive trees planted long before us. When it opens, in spring 2027, there will be fifteen suites, a table cooking what the land gives, and a place built for doing nothing — and having that be enough."
+      "body": "La Finca Oropesa doesn't open tomorrow. It is being built, stone by stone, among 1,200 olive trees — some of them a century old — planted long before us. When it opens, in spring 2027, there will be fifteen suites, a table cooking what the land gives, and a place built for doing nothing — and having that be enough."
+    },
+    "facts": {
+      "title": "The place, in a few facts",
+      "items": [
+        {
+          "label": "The land",
+          "body": "1,200 olive trees, some of them a century old, in the first foothills of the Sierra de Gredos."
+        },
+        {
+          "label": "The Roman road",
+          "body": "The village takes its name from the Roman road that linked Mérida to Toledo and ran through here."
+        },
+        {
+          "label": "An oil tradition",
+          "body": "La Calzada de Oropesa once had five olive mills. The grove belongs to that history."
+        },
+        {
+          "label": "The castle nearby",
+          "body": "A few kilometres away, the fortress of Oropesa became, in 1930, the first Parador in Spain set inside a historic monument."
+        }
+      ]
     },
     "teasers": {
       "oliveraie": {

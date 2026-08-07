@@ -39,14 +39,35 @@
     "seoTitle": "La Finca Oropesa — Hotel rural de lujo entre olivos, cerca de Madrid",
     "seoDescription": "Un dominio de 15 suites entre 1.200 olivos, a 2 horas de Madrid, en La Calzada de Oropesa (Toledo). Apertura primavera de 2027. Únete a la lista de espera.",
     "hero": {
-      "kicker": "La Calzada de Oropesa · 1.200 olivos",
+      "kicker": "La Calzada de Oropesa, Toledo · Apertura primavera 2027",
       "title": "Volver a lo esencial",
-      "subtitle": "Un dominio en construcción entre olivos centenarios, a dos horas de Madrid.",
+      "subtitle": "Un dominio en construcción entre olivos centenarios, frente a la Sierra de Gredos, a dos horas de Madrid.",
       "cta": "Únete a la lista de espera"
     },
     "thesis": {
       "title": "Un dominio en construcción",
-      "body": "La Finca Oropesa no abre mañana. Se está construyendo, piedra a piedra, entre 1.200 olivos plantados mucho antes que nosotros. Cuando abra, en la primavera de 2027, serán quince suites, una mesa que cocinará lo que da la tierra, y un lugar pensado para no hacer nada — y que eso baste."
+      "body": "La Finca Oropesa no abre mañana. Se está construyendo, piedra a piedra, entre 1.200 olivos —algunos centenarios— plantados mucho antes que nosotros. Cuando abra, en la primavera de 2027, serán quince suites, una mesa que cocinará lo que da la tierra, y un lugar pensado para no hacer nada — y que eso baste."
+    },
+    "facts": {
+      "title": "El lugar, en algunos datos",
+      "items": [
+        {
+          "label": "La tierra",
+          "body": "1.200 olivos, algunos centenarios, en las primeras estribaciones de la Sierra de Gredos."
+        },
+        {
+          "label": "La calzada romana",
+          "body": "El pueblo debe su nombre a la calzada romana que unía Mérida con Toledo y pasaba por aquí."
+        },
+        {
+          "label": "Una tradición de aceite",
+          "body": "La Calzada de Oropesa llegó a tener cinco almazaras. El olivar se inscribe en esa historia."
+        },
+        {
+          "label": "El castillo vecino",
+          "body": "A pocos kilómetros, la fortaleza de Oropesa se convirtió en 1930 en el primer Parador de España instalado en un monumento histórico."
+        }
+      ]
     },
     "teasers": {
       "oliveraie": {

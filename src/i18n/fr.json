@@ -39,14 +39,35 @@
     "seoTitle": "La Finca Oropesa — Hôtel de charme au cœur d'une oliveraie, près de Madrid",
     "seoDescription": "Un domaine de 15 suites entre 1 200 oliviers, à 2 heures de Madrid, à La Calzada de Oropesa (Tolède). Ouverture printemps 2027. Rejoignez la liste d'attente.",
     "hero": {
-      "kicker": "La Calzada de Oropesa · 1 200 oliviers",
+      "kicker": "La Calzada de Oropesa, Tolède · Ouverture printemps 2027",
       "title": "Revenir à l'essentiel",
-      "subtitle": "Un domaine en construction au cœur d'une oliveraie centenaire, à deux heures de Madrid.",
+      "subtitle": "Un domaine en construction au cœur d'une oliveraie centenaire, face à la Sierra de Gredos, à deux heures de Madrid.",
       "cta": "Rejoindre la liste d'attente"
     },
     "thesis": {
       "title": "Un domaine en construction",
-      "body": "La Finca Oropesa n'ouvre pas demain. Elle se construit, pierre après pierre, au milieu de 1 200 oliviers plantés bien avant nous. À l'ouverture, au printemps 2027, il y aura quinze suites, une table qui cuisinera ce que donne la terre, et un lieu pensé pour qu'on n'y fasse rien — et que ce rien suffise."
+      "body": "La Finca Oropesa n'ouvre pas demain. Elle se construit, pierre après pierre, au milieu de 1 200 oliviers dont certains centenaires, plantés bien avant nous. À l'ouverture, au printemps 2027, il y aura quinze suites, une table qui cuisinera ce que donne la terre, et un lieu pensé pour qu'on n'y fasse rien — et que ce rien suffise."
+    },
+    "facts": {
+      "title": "Le lieu, en quelques faits",
+      "items": [
+        {
+          "label": "La terre",
+          "body": "1 200 oliviers, dont certains centenaires, aux premiers contreforts de la Sierra de Gredos."
+        },
+        {
+          "label": "La voie romaine",
+          "body": "Le village doit son nom à la chaussée romaine qui reliait Mérida à Tolède et passait ici."
+        },
+        {
+          "label": "Une tradition d'huile",
+          "body": "La Calzada de Oropesa a compté jusqu'à cinq moulins à huile. L'oliveraie s'inscrit dans cette histoire."
+        },
+        {
+          "label": "Le château voisin",
+          "body": "À quelques kilomètres, la forteresse d'Oropesa est devenue en 1930 le premier Parador d'Espagne installé dans un monument historique."
+        }
+      ]
     },
     "teasers": {
       "oliveraie": {
