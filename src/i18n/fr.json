@@ -66,6 +66,10 @@
         {
           "label": "Le château voisin",
           "body": "À quelques kilomètres, la forteresse d'Oropesa est devenue en 1930 le premier Parador d'Espagne installé dans un monument historique."
+        },
+        {
+          "label": "L'architecte d'intérieur",
+          "body": "Les intérieurs seront signés Tomás Alía, né à Lagartera, le village voisin. Prix national d'architecture d'intérieur, il travaille depuis toujours les artisanats d'ici : céramique de Talavera, broderie de Lagartera, verre soufflé, fer forgé."
         }
       ]
     },
@@ -129,7 +133,7 @@
     "intro": "Rien de ce qui suit n'existe encore. Ça se construit. On le décrit tel que ce sera, pas tel que c'est aujourd'hui — sans fausse photo de ce qui n'existe pas, parce qu'un projet sérieux ne se déguise pas.",
     "suites": {
       "title": "Quinze suites",
-      "body": "Quinze suites pour deux personnes occuperont le cœur du domaine, au milieu des oliviers. Un seul type de suite pour l'instant — la différenciation viendra plus tard, selon l'avancée des travaux.",
+      "body": "Quinze suites pour deux personnes occuperont le cœur du domaine, au milieu des oliviers. Les intérieurs seront dessinés par Tomás Alía, architecte d'intérieur né à Lagartera, à quelques kilomètres d'ici, qui travaille la céramique de Talavera, la broderie lagarterane et le fer forgé comme matières premières. Un seul type de suite pour l'instant — la différenciation viendra plus tard, selon l'avancée des travaux.",
       "priceNote": "Dès 400 € la nuit",
       "detailsNote": "Superficie, équipements et vue seront publiés avant l'ouverture."
     },

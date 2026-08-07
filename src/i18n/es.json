@@ -66,6 +66,10 @@
         {
           "label": "El castillo vecino",
           "body": "A pocos kilómetros, la fortaleza de Oropesa se convirtió en 1930 en el primer Parador de España instalado en un monumento histórico."
+        },
+        {
+          "label": "El interiorista",
+          "body": "Los interiores llevarán la firma de Tomás Alía, nacido en Lagartera, el pueblo de al lado. Premio Nacional de Arquitectura de Interiores, trabaja desde siempre la artesanía de esta tierra: cerámica de Talavera, bordado lagarterano, vidrio soplado y forja."
         }
       ]
     },
@@ -129,7 +133,7 @@
     "intro": "Nada de lo que sigue existe todavía. Se está construyendo. Lo describimos tal como será, no como es hoy — sin fotografías de lo que aún no existe, porque un proyecto serio no se disfraza.",
     "suites": {
       "title": "Quince suites",
-      "body": "Quince suites para dos personas ocuparán el corazón del dominio, entre los olivos. Un único tipo de suite por ahora — la diferenciación llegará más adelante, según cómo evolucione la obra.",
+      "body": "Quince suites para dos personas ocuparán el corazón del dominio, entre los olivos. Los interiores los firmará Tomás Alía, interiorista nacido en Lagartera, a pocos kilómetros de aquí, que trabaja la cerámica de Talavera, el bordado lagarterano y la forja como materia prima. Un único tipo de suite por ahora — la diferenciación llegará más adelante, según cómo evolucione la obra.",
       "priceNote": "Desde 400 € la noche",
       "detailsNote": "Superficie, equipamiento y vistas se publicarán antes de la apertura."
     },
