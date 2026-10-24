@@ -7,7 +7,7 @@ todo: true
 
 ## 1. This site does not use tracking cookies
 
-La Finca Oropesa does not use advertising or behavioural analytics cookies. If an audience measurement tool is added in the future, it will be a cookie-free solution (such as Plausible or Vercel Analytics), specifically to avoid requiring a consent banner.
+La Finca Oropesa does not use advertising or behavioural analytics cookies. We measure audience with Vercel Analytics, a cookie-free solution that does not identify individual visitors, specifically to avoid requiring a consent banner. **[TODO: have legal counsel confirm the exact description of this processing and reflect it in the privacy policy]**
 
 ## 2. Third-party content
 

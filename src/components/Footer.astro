@@ -8,18 +8,24 @@ import WaitlistForm from "./WaitlistForm.astro";
 
 interface Props {
   locale: Locale;
+  // Pages qui contiennent déjà leur propre formulaire de liste d'attente : on n'en répète pas un second en pied de page.
+  hideWaitlist?: boolean;
 }
-const { locale } = Astro.props;
+const { locale, hideWaitlist = false } = Astro.props;
 const t = getDictionary(locale);
 const year = new Date().getFullYear();
 ---
 
 <footer class="bg-olive-nuit px-4 py-12 text-chaux md:px-8">
-  <div class="mx-auto mb-12 max-w-6xl bg-chaux p-6 text-olive-nuit md:p-8">
-    <h2 class="font-display mb-2 text-2xl">{t.footer.waitlistTitle}</h2>
-    <p class="mb-6 text-sm text-olive-feuille">{t.footer.waitlistText}</p>
-    <WaitlistForm locale={locale} id="liste-attente-footer" compact />
-  </div>
+  {
+    !hideWaitlist && (
+      <div class="mx-auto mb-12 max-w-6xl bg-chaux p-6 text-olive-nuit md:p-8">
+        <h2 class="font-display mb-2 text-2xl">{t.footer.waitlistTitle}</h2>
+        <p class="mb-6 text-sm text-olive-feuille">{t.footer.waitlistText}</p>
+        <WaitlistForm locale={locale} id="liste-attente-footer" compact />
+      </div>
+    )
+  }
 
   <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
     <div>

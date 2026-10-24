@@ -14,7 +14,9 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  adapter: vercel(),
+  // Mesure d'audience sans cookie (Vercel Analytics) : pas de bandeau de consentement nécessaire.
+  // À activer aussi dans Vercel : projet > onglet Analytics > Enable.
+  adapter: vercel({ webAnalytics: { enabled: true } }),
   integrations: [
     sitemap({
       // Exclut la racine (redirection) et les pages de confirmation (destinations de

@@ -61,7 +61,7 @@ const t = getDictionary(locale);
     <main id="contenu">
       <slot />
     </main>
-    <Footer locale={locale} />
+    <Footer locale={locale} hideWaitlist={routeKey === "home" || routeKey === "sejourner"} />
     <Lightbox closeLabel={t.lightbox.close} nextLabel={t.lightbox.next} prevLabel={t.lightbox.prev} />
     <script>
       import "../scripts/reveal";

@@ -85,6 +85,8 @@ export async function sendWaitlistEmails(input: WaitlistInput): Promise<void> {
   await resend.emails.send({
     from: FROM_ADDRESS,
     to: input.email,
+    // Sans adresse de réponse, un visiteur qui répond écrit à no-responder@ et son message se perd.
+    replyTo: SITE.contact.email,
     subject: confirmationCopy(locale).subject,
     html: confirmationHtml(locale),
   });
@@ -116,6 +118,8 @@ export async function sendStayRequestEmails(input: StayRequestInput): Promise<vo
   await resend.emails.send({
     from: FROM_ADDRESS,
     to: input.email,
+    // Sans adresse de réponse, un visiteur qui répond écrit à no-responder@ et son message se perd.
+    replyTo: SITE.contact.email,
     subject: confirmationCopy(locale).subject,
     html: confirmationHtml(locale),
   });

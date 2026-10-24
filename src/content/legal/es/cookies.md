@@ -7,7 +7,7 @@ todo: true
 
 ## 1. Este sitio no utiliza cookies de seguimiento
 
-La Finca Oropesa no utiliza cookies publicitarias ni de análisis de comportamiento. Si en el futuro se añade una herramienta de medición de audiencia, será una solución sin cookies (por ejemplo Plausible o Vercel Analytics), precisamente para no requerir un banner de consentimiento.
+La Finca Oropesa no utiliza cookies publicitarias ni de análisis de comportamiento. Medimos la audiencia con Vercel Analytics, una solución sin cookies que no identifica a cada visitante, precisamente para no requerir un banner de consentimiento. **[TODO: confirmar con el asesor jurídico la descripción exacta de este tratamiento y reflejarla en la política de privacidad]**
 
 ## 2. Contenido de terceros
 
